@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html {
+      scroll-behavior: smooth; /* smooth scrolling */
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -21,6 +25,21 @@
       padding: 30px 20px;
     }
 
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     main {
       max-width: 800px;
       margin: auto;
@@ -28,7 +47,7 @@
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
     h2 {
@@ -72,17 +91,25 @@
   <header>
     <h1>Joseph Suhail</h1>
     <p>Cybersecurity Student</p>
+
+    <!-- 🔥 Clickable Navigation -->
+    <nav>
+      <a href="#welcome">Welcome</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
 
-    <section>
+    <section id="welcome">
       <h2>Welcome</h2>
       <p>This is my personal website hosted on GitHub Pages.</p>
       <button onclick="showMessage()">Click Me</button>
     </section>
 
-    <section>
+    <section id="about">
       <h2>About Me</h2>
       <p>
         I am a cybersecurity student focused on learning network security,
@@ -91,7 +118,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
       <ul style="list-style: none; padding: 0;">
         <li><strong>Personal Website</strong> — Hosted on GitHub Pages</li>
@@ -99,7 +126,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
       <p>Email: your-email@example.com</p>
       <p>
