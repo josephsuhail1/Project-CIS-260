@@ -1,75 +1,126 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-    <head> 
-        <meta charset="UTF-8">
-        <title>My First Web page</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <title>Joseph Suhail | Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        text-align: center; 
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+      text-align: center;
     }
 
     header {
-        background-color: #333;
-        color: white;
-        padding: 20px;
+      background-color: #333;
+      color: white;
+      padding: 30px 20px;
     }
 
     main {
-        padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #333;
     }
 
     button {
-        padding: 10px 20px;
-        background-color: #0077cc;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+      padding: 10px 20px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
     }
-        
+
     button:hover {
-        background-color: #f4f4f4
+      background-color: #005fa3;
     }
 
     footer {
-        margin-top: 40px;
-        padding: 20px;
-        background-color: #333;
-        color: white
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #333;
+      color: white;
     }
 
-</style> 
-    </head>
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
 
-    <body>
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 
-        <header> 
-            <h1>Welcome to my Website!</h1>
-        </header>
+<body>
 
-        <main> 
-            <h2>Hello, my name is Joseph!</h2>
-            <p>This is a basic HTML page that I'm starting</p>
+  <header>
+    <h1>Joseph Suhail</h1>
+    <p>Cybersecurity Student</p>
+  </header>
 
-            <button onclick="showMessage()">Click Me!</button>
-        </main> 
+  <main>
 
-        <footer> 
-            <p>&copy; 2026 Joseph Suhail</p>
-        </footer> 
+    <section>
+      <h2>Welcome</h2>
+      <p>This is my personal website hosted on GitHub Pages.</p>
+      <button onclick="showMessage()">Click Me</button>
+    </section>
 
-        <script>
-            function showMessage() { 
-                alert("YOU CLICKED MY BUTTON!");
-            }
-           </script> 
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a cybersecurity student focused on learning network security,
+        incident response, and secure system practices. This site will
+        showcase my projects and progress.
+      </p>
+    </section>
 
-          </body>
-</html> 
+    <section>
+      <h2>Projects</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li><strong>Personal Website</strong> — Hosted on GitHub Pages</li>
+        <li>More projects coming soon</li>
+      </ul>
+    </section>
 
+    <section>
+      <h2>Contact</h2>
+      <p>Email: your-email@example.com</p>
+      <p>
+        GitHub:
+        <a href="https://github.com/josephsuhail1" target="_blank">
+          github.com/josephsuhail1
+        </a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Joseph Suhail</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("YOU CLICKED MY BUTTON!");
+    }
+  </script>
+
+</body>
+</html>
