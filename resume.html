@@ -2,149 +2,247 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joseph Suhail | Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+*{
+box-sizing:border-box;
+}
 
 body{
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", Arial, sans-serif;
-    margin:0;
-    background:#ffffff;
-    color:#1d1d1f;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+margin:0;
+background:#0f0f10;
+color:#f5f5f7;
 }
 
 header{
-    text-align:center;
-    padding:60px 20px 40px;
+background:rgba(15,15,16,0.85);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+padding:16px 28px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-header h1{
-    font-size:42px;
-    font-weight:600;
-    margin-bottom:10px;
+.top-bar{
+max-width:1200px;
+margin:0 auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+flex-wrap:nowrap;
 }
 
-header p{
-    color:#6e6e73;
-    font-size:18px;
+.brand{
+flex-shrink:0;
+}
+
+.brand h1{
+margin:0;
+font-size:22px;
+font-weight:600;
+}
+
+.brand p{
+margin:3px 0 0 0;
+font-size:13px;
+color:#a1a1a6;
 }
 
 nav{
-    margin-top:20px;
+display:flex;
+align-items:center;
+gap:8px;
+flex-shrink:0;
 }
 
 nav a{
-    text-decoration:none;
-    margin:0 18px;
-    color:#1d1d1f;
-    font-weight:500;
+color:#f5f5f7;
+text-decoration:none;
+font-size:14px;
+padding:8px 12px;
+border-radius:999px;
+transition:background-color 0.2s ease,color 0.2s ease;
+white-space:nowrap;
 }
 
 nav a:hover{
-    color:#0071e3;
+background:rgba(255,255,255,0.08);
 }
 
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
+nav a.active{
+background:rgba(255,255,255,0.12);
+}
+
+main{
+max-width:900px;
+margin:80px auto;
+padding:0 20px;
 }
 
 .resume-box{
-    background:#f5f5f7;
-    border-radius:14px;
-    padding:40px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+padding:40px 34px;
+box-shadow:0 18px 40px rgba(0,0,0,0.24);
 }
 
-h2{
-    margin-top:30px;
-    font-size:24px;
+.resume-box h2{
+margin-top:0;
+margin-bottom:20px;
+font-size:42px;
+font-weight:700;
+letter-spacing:-1px;
 }
 
-ul{
-    padding-left:20px;
+.resume-box h3{
+margin-top:28px;
+margin-bottom:12px;
+font-size:24px;
+font-weight:600;
+}
+
+.resume-box p{
+font-size:17px;
+line-height:1.6;
+color:#c7c7cc;
+margin-bottom:12px;
+}
+
+.resume-box ul{
+margin:0;
+padding-left:22px;
+color:#c7c7cc;
+}
+
+.resume-box li{
+margin-bottom:10px;
+font-size:17px;
+line-height:1.6;
 }
 
 .download{
-    margin-top:30px;
+margin-top:28px;
 }
 
-button{
-    background:#0071e3;
-    color:white;
-    border:none;
-    padding:12px 24px;
-    border-radius:8px;
-    font-size:16px;
-    cursor:pointer;
+.download a{
+display:inline-block;
+text-decoration:none;
+background:#f5f5f7;
+color:#0f0f10;
+padding:12px 22px;
+border-radius:999px;
+font-size:15px;
+font-weight:600;
+transition:opacity 0.2s ease;
 }
 
-button:hover{
-    background:#005bb5;
+.download a:hover{
+opacity:0.85;
 }
 
 footer{
-    text-align:center;
-    padding:40px;
-    color:#6e6e73;
+text-align:center;
+padding:24px;
+border-top:1px solid rgba(255,255,255,0.08);
+color:#8e8e93;
+font-size:14px;
+margin-top:70px;
 }
 
+@media(max-width:900px){
+
+.top-bar{
+flex-direction:column;
+justify-content:center;
+text-align:center;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.resume-box h2{
+font-size:34px;
+}
+
+.resume-box h3{
+font-size:22px;
+}
+
+.resume-box p,
+.resume-box li{
+font-size:16px;
+}
+
+}
 </style>
 </head>
 
 <body>
 
 <header>
+<div class="top-bar">
+
+<div class="brand">
 <h1>Joseph Suhail</h1>
-<p>Cybersecurity Student | Portfolio</p>
+<p>Cybersecurity Student</p>
+</div>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="projects.html">Projects</a>
-<a href="resume.html">Resume</a>
+<a href="resume.html" class="active">Resume</a>
 <a href="contact.html">Contact</a>
 </nav>
+
+</div>
 </header>
 
-<div class="container">
-
+<main>
 <div class="resume-box">
+<h2>Resume</h2>
 
-<h2>Education</h2>
+<h3>Education</h3>
 <p>Wilbur Wright College – Chicago, IL</p>
 <p>Associate in Applied Science – Cybersecurity</p>
 
-<h2>Skills</h2>
+<h3>Skills</h3>
 <ul>
 <li>Python Programming</li>
 <li>Digital Forensics</li>
-<li>Networking (Cisco Packet Tracer)</li>
+<li>Networking with Cisco Packet Tracer</li>
 <li>Linux Fundamentals</li>
-<li>HTML & CSS</li>
+<li>HTML and CSS</li>
 </ul>
 
-<h2>Projects</h2>
+<h3>Projects</h3>
 <ul>
 <li>Digital Forensics Investigations</li>
 <li>Packet Tracer Network Labs</li>
-<li>Python Security Scripts</li>
+<li>Python Coursework and Practice</li>
 <li>Personal Portfolio Website</li>
 </ul>
 
-<h2>Experience</h2>
-<p>Cybersecurity and networking coursework focused on digital evidence analysis, system security, and network infrastructure.</p>
+<h3>Experience</h3>
+<p>
+Cybersecurity and networking coursework focused on digital evidence analysis,
+system security, networking concepts, and technical problem solving.
+</p>
 
 <div class="download">
-<a href="resume.pdf" download>
-<button>Download Resume</button>
-</a>
+<a href="resume.pdf" download>Download Resume</a>
 </div>
-
 </div>
-
-</div>
+</main>
 
 <footer>
 <p>© 2026 Joseph Suhail</p>
