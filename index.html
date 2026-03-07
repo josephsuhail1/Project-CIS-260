@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
 margin:0;
@@ -16,7 +17,6 @@ color:#f5f5f7;
 header{
 background:rgba(15,15,16,0.85);
 backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(255,255,255,0.08);
 padding:16px 28px;
 position:sticky;
@@ -25,7 +25,7 @@ z-index:1000;
 }
 
 .top-bar{
-max-width:1180px;
+max-width:1200px;
 margin:auto;
 display:flex;
 justify-content:space-between;
@@ -52,7 +52,6 @@ margin-left:14px;
 font-size:14px;
 padding:8px 12px;
 border-radius:999px;
-transition:background-color 0.2s ease;
 }
 
 nav a:hover{
@@ -60,28 +59,50 @@ background:rgba(255,255,255,0.08);
 }
 
 .hero{
-max-width:900px;
-margin:80px auto 60px auto;
+max-width:1200px;
+margin:90px auto 60px auto;
 padding:0 20px;
-text-align:center;
-}
-
-.hero h2{
-font-size:58px;
-font-weight:700;
-letter-spacing:-1.6px;
-margin:0 0 18px 0;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
 }
 
 .hero-text{
-max-width:720px;
-margin:0 auto 36px auto;
+flex:1;
+}
+
+.hero-text h2{
+font-size:56px;
+font-weight:700;
+letter-spacing:-1.6px;
+margin-bottom:18px;
+}
+
+.hero-text p{
 font-size:20px;
 line-height:1.5;
 color:#c7c7cc;
+margin-bottom:30px;
 }
 
-.profile-wrap{
+.info-box{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:24px;
+padding:24px 26px;
+box-shadow:0 12px 30px rgba(0,0,0,0.22);
+max-width:500px;
+}
+
+.info-box p{
+margin:0;
+font-size:17px;
+color:#c7c7cc;
+}
+
+.hero-image{
+flex:1;
 display:flex;
 justify-content:center;
 }
@@ -95,27 +116,9 @@ box-shadow:0 20px 50px rgba(0,0,0,0.35);
 }
 
 .profile-card img{
-width:250px;
-height:auto;
-display:block;
+width:280px;
 border-radius:22px;
-}
-
-.info-box{
-max-width:760px;
-margin:28px auto 0 auto;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:24px;
-padding:28px 26px;
-box-shadow:0 12px 30px rgba(0,0,0,0.22);
-}
-
-.info-box p{
-margin:0;
-font-size:17px;
-line-height:1.6;
-color:#c7c7cc;
+display:block;
 }
 
 footer{
@@ -124,48 +127,33 @@ padding:24px;
 border-top:1px solid rgba(255,255,255,0.08);
 color:#8e8e93;
 font-size:14px;
-margin-top:70px;
+margin-top:80px;
 }
 
-@media(max-width:700px){
+@media(max-width:900px){
 
-.top-bar{
-justify-content:center;
+.hero{
+flex-direction:column;
 text-align:center;
 }
 
-nav{
-margin-top:8px;
-}
-
-nav a{
-margin:4px;
-display:inline-block;
-}
-
-.hero h2{
-font-size:40px;
-}
-
-.hero-text{
-font-size:18px;
-}
-
-.profile-card img{
-width:210px;
+.hero-text h2{
+font-size:42px;
 }
 
 .info-box{
-padding:22px 20px;
+margin:auto;
 }
 
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="top-bar">
 
 <div class="brand">
@@ -181,32 +169,43 @@ padding:22px 20px;
 </nav>
 
 </div>
+
 </header>
+
 
 <section class="hero">
 
+<div class="hero-text">
+
 <h2>Joseph Suhail</h2>
 
-<p class="hero-text">
-Cybersecurity student focused on network security, system protection,
-and technical problem solving through coursework and hands-on projects.
+<p>
+Cybersecurity student focused on network security,
+system protection, and technical problem solving
+through coursework and hands-on projects.
 </p>
-
-<div class="profile-wrap">
-<div class="profile-card">
-<img src="joseph.png" alt="Joseph Suhail">
-</div>
-</div>
 
 <div class="info-box">
 <p>
-Welcome to my website. This space highlights my academic growth,
-developing technical skills, and the work I continue to build as I
-move toward a future in cybersecurity.
+Welcome to my portfolio website. This space highlights my academic growth,
+developing technical skills, and the projects I continue to build as I
+work toward a future in cybersecurity.
 </p>
 </div>
 
+</div>
+
+
+<div class="hero-image">
+
+<div class="profile-card">
+<img src="joseph.png" alt="Joseph Suhail">
+</div>
+
+</div>
+
 </section>
+
 
 <footer>
 <p>© 2026 Joseph Suhail</p>
