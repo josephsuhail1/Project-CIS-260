@@ -6,22 +6,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 body{
-font-family:Georgia,"Times New Roman",serif;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
 margin:0;
-background:linear-gradient(to bottom,#181311,#241b18,#312521);
-color:#f3ece4;
+background:#0f0f10;
+color:#f5f5f7;
 }
 
 header{
-background:#221917;
-padding:18px 30px;
-border-bottom:1px solid #5a443d;
+background:rgba(15,15,16,0.85);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+padding:16px 28px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .top-bar{
-max-width:1100px;
+max-width:1180px;
 margin:auto;
 display:flex;
 justify-content:space-between;
@@ -31,81 +35,82 @@ flex-wrap:wrap;
 
 .brand h1{
 margin:0;
-font-size:24px;
+font-size:22px;
+font-weight:600;
 }
 
 .brand p{
-margin:2px 0 0 0;
+margin:3px 0 0 0;
 font-size:13px;
-color:#d6c5b8;
+color:#a1a1a6;
 }
 
 nav a{
-color:#f3ece4;
+color:#f5f5f7;
 text-decoration:none;
-margin-left:16px;
+margin-left:14px;
 font-size:14px;
-padding:6px 10px;
-border-radius:6px;
+padding:8px 12px;
+border-radius:999px;
+transition:background-color 0.2s ease;
 }
 
 nav a:hover{
-background:#4d3933;
+background:rgba(255,255,255,0.08);
 }
 
 main{
-max-width:800px;
+max-width:820px;
 margin:80px auto;
 padding:0 20px;
 }
 
 .contact-box{
 background:rgba(255,255,255,0.05);
-border:1px solid #5b4740;
-border-radius:18px;
-padding:40px;
-box-shadow:0 10px 24px rgba(0,0,0,.25);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+padding:40px 34px;
+box-shadow:0 18px 40px rgba(0,0,0,0.24);
 text-align:center;
 }
 
 .contact-box h2{
 margin-top:0;
-margin-bottom:16px;
-font-size:34px;
-color:#fff7f0;
+margin-bottom:18px;
+font-size:42px;
+font-weight:700;
+letter-spacing:-1px;
 }
 
 .contact-box p{
-color:#ddd0c5;
-font-size:17px;
-margin-bottom:20px;
+font-size:18px;
+line-height:1.6;
+color:#c7c7cc;
+margin-bottom:22px;
 }
 
 .contact-links a{
 display:block;
-margin:10px 0;
+margin:12px 0;
 font-size:18px;
-color:#e4d3c7;
+color:#f5f5f7;
 text-decoration:none;
 }
 
 .contact-links a:hover{
-color:#ffffff;
+color:#a1a1a6;
 }
 
 footer{
 text-align:center;
-padding:22px;
-background:#1f1715;
-color:#cdbbae;
-margin-top:60px;
+padding:24px;
+border-top:1px solid rgba(255,255,255,0.08);
+color:#8e8e93;
+font-size:14px;
+margin-top:70px;
 }
 
 @media(max-width:700px){
-
-header{
-padding:18px 20px;
-}
 
 .top-bar{
 justify-content:center;
@@ -121,15 +126,22 @@ margin:4px;
 display:inline-block;
 }
 
+.contact-box h2{
+font-size:34px;
 }
 
+.contact-box p,
+.contact-links a{
+font-size:16px;
+}
+
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="top-bar">
 
 <div class="brand">
@@ -145,13 +157,10 @@ display:inline-block;
 </nav>
 
 </div>
-
 </header>
 
 <main>
-
 <div class="contact-box">
-
 <h2>Contact</h2>
 
 <p>
@@ -160,25 +169,15 @@ you can reach me through the following:
 </p>
 
 <div class="contact-links">
-
-<a href="mailto:Josephsuhail1@gmail.com">
-Email: Josephsuhail1@gmail.com
-</a>
-
-<a href="https://github.com/josephsuhail1" target="_blank">
-GitHub: github.com/josephsuhail1
-</a>
-
+<a href="mailto:Josephsuhail1@gmail.com">Email: Josephsuhail1@gmail.com</a>
+<a href="https://github.com/josephsuhail1" target="_blank">GitHub: github.com/josephsuhail1</a>
 </div>
 
 </div>
-
 </main>
 
 <footer>
-
 <p>© 2026 Joseph Suhail</p>
-
 </footer>
 
 </body>
