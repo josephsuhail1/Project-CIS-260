@@ -6,6 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+html{
+overflow-y:scroll;
+}
+
 *{
 box-sizing:border-box;
 }
@@ -35,11 +40,6 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 gap:20px;
-flex-wrap:nowrap;
-}
-
-.brand{
-flex-shrink:0;
 }
 
 .brand h1{
@@ -56,9 +56,7 @@ color:#a1a1a6;
 
 nav{
 display:flex;
-align-items:center;
 gap:8px;
-flex-shrink:0;
 }
 
 nav a{
@@ -67,8 +65,6 @@ text-decoration:none;
 font-size:14px;
 padding:8px 12px;
 border-radius:999px;
-transition:background-color 0.2s ease,color 0.2s ease;
-white-space:nowrap;
 }
 
 nav a:hover{
@@ -98,7 +94,6 @@ margin-top:0;
 margin-bottom:18px;
 font-size:42px;
 font-weight:700;
-letter-spacing:-1px;
 }
 
 .page-box p{
@@ -106,10 +101,6 @@ font-size:18px;
 line-height:1.7;
 color:#c7c7cc;
 margin-bottom:18px;
-}
-
-.page-box p:last-child{
-margin-bottom:0;
 }
 
 footer{
@@ -121,28 +112,6 @@ font-size:14px;
 margin-top:70px;
 }
 
-@media(max-width:900px){
-
-.top-bar{
-flex-direction:column;
-justify-content:center;
-text-align:center;
-}
-
-nav{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.page-box h2{
-font-size:34px;
-}
-
-.page-box p{
-font-size:17px;
-}
-
-}
 </style>
 </head>
 
@@ -168,7 +137,9 @@ font-size:17px;
 </header>
 
 <main>
+
 <div class="page-box">
+
 <h2>About</h2>
 
 <p>
@@ -185,7 +156,9 @@ how they are protected, and how organizations keep their data secure.
 As I continue learning, I plan to keep growing my portfolio through projects,
 coursework, and technical experience that reflect my progress in the field.
 </p>
+
 </div>
+
 </main>
 
 <footer>
