@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
 margin:0;
@@ -17,10 +16,12 @@ color:#f5f5f7;
 header{
 background:rgba(15,15,16,0.85);
 backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(255,255,255,0.08);
 padding:16px 28px;
 position:sticky;
 top:0;
+z-index:1000;
 }
 
 .top-bar{
@@ -51,6 +52,7 @@ margin-left:14px;
 font-size:14px;
 padding:8px 12px;
 border-radius:999px;
+transition:background-color 0.2s ease;
 }
 
 nav a:hover{
@@ -65,19 +67,18 @@ text-align:center;
 }
 
 .hero h2{
-font-size:56px;
+font-size:58px;
 font-weight:700;
-letter-spacing:-1.5px;
-margin-bottom:18px;
+letter-spacing:-1.6px;
+margin:0 0 18px 0;
 }
 
 .hero-text{
-max-width:700px;
-margin:auto;
+max-width:720px;
+margin:0 auto 36px auto;
 font-size:20px;
 line-height:1.5;
 color:#c7c7cc;
-margin-bottom:40px;
 }
 
 .profile-wrap{
@@ -87,7 +88,7 @@ justify-content:center;
 
 .profile-card{
 background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
+border:1px solid rgba(255,255,255,0.10);
 border-radius:28px;
 padding:20px;
 box-shadow:0 20px 50px rgba(0,0,0,0.35);
@@ -98,6 +99,23 @@ width:250px;
 height:auto;
 display:block;
 border-radius:22px;
+}
+
+.info-box{
+max-width:760px;
+margin:28px auto 0 auto;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:24px;
+padding:28px 26px;
+box-shadow:0 12px 30px rgba(0,0,0,0.22);
+}
+
+.info-box p{
+margin:0;
+font-size:17px;
+line-height:1.6;
+color:#c7c7cc;
 }
 
 footer{
@@ -137,15 +155,17 @@ font-size:18px;
 width:210px;
 }
 
+.info-box{
+padding:22px 20px;
 }
 
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="top-bar">
 
 <div class="brand">
@@ -161,23 +181,29 @@ width:210px;
 </nav>
 
 </div>
-
 </header>
 
 <section class="hero">
 
-<h2>Cybersecurity Student</h2>
+<h2>Joseph Suhail</h2>
 
 <p class="hero-text">
-My name is Joseph Suhail, and I am a cybersecurity student focused on building
-strong skills in network security, system protection, and technical problem
-solving through coursework and hands-on projects.
+Cybersecurity student focused on network security, system protection,
+and technical problem solving through coursework and hands-on projects.
 </p>
 
 <div class="profile-wrap">
 <div class="profile-card">
 <img src="joseph.png" alt="Joseph Suhail">
 </div>
+</div>
+
+<div class="info-box">
+<p>
+Welcome to my website. This space highlights my academic growth,
+developing technical skills, and the work I continue to build as I
+move toward a future in cybersecurity.
+</p>
 </div>
 
 </section>
