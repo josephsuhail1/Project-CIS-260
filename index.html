@@ -7,162 +7,102 @@
 
 <style>
 
-html {
-scroll-behavior: smooth;
+body{
+font-family:Georgia,"Times New Roman",serif;
+margin:0;
+background:linear-gradient(to bottom,#181311,#241b18,#312521);
+color:#f3ece4;
 }
 
-body {
-font-family: Georgia, "Times New Roman", serif;
-margin: 0;
-padding: 0;
-background: linear-gradient(to bottom, #181311, #241b18, #312521);
-color: #f3ece4;
-line-height: 1.6;
+header{
+background:#221917;
+padding:18px 30px;
+border-bottom:1px solid #5a443d;
 }
 
-header {
-background: linear-gradient(to right, #221917, #342622);
-padding: 18px 30px;
-border-bottom: 1px solid #5a443d;
-position: sticky;
-top: 0;
+.top-bar{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
 }
 
-.top-bar {
-max-width: 1100px;
-margin: auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-wrap: wrap;
-gap: 10px;
+.brand h1{
+margin:0;
+font-size:24px;
 }
 
-.brand h1 {
-margin: 0;
-font-size: 24px;
+.brand p{
+margin:2px 0 0 0;
+font-size:13px;
+color:#d6c5b8;
 }
 
-.brand p {
-margin: 2px 0 0 0;
-font-size: 13px;
-color: #d6c5b8;
+nav a{
+color:#f3ece4;
+text-decoration:none;
+margin-left:16px;
+font-size:14px;
+padding:6px 10px;
+border-radius:6px;
 }
 
-nav a {
-color: #f3ece4;
-text-decoration: none;
-margin-left: 16px;
-font-size: 14px;
-padding: 6px 10px;
-border-radius: 6px;
-transition: background-color 0.2s ease;
+nav a:hover{
+background:#4d3933;
 }
 
-nav a:hover,
-nav a.active {
-background-color: #4d3933;
+.hero{
+max-width:1100px;
+margin:80px auto;
+padding:0 20px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
 
-.hero {
-max-width: 1100px;
-margin: 60px auto;
-padding: 0 20px;
-display: grid;
-grid-template-columns: 1.1fr 0.9fr;
-gap: 30px;
-align-items: center;
+.hero-text{
+background:rgba(255,255,255,0.05);
+border:1px solid #5b4740;
+border-radius:18px;
+padding:40px;
 }
 
-.hero-left {
-background-color: rgba(255,255,255,0.05);
-border: 1px solid #5b4740;
-border-radius: 18px;
-padding: 40px 30px;
-box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+.hero-text h2{
+margin-top:0;
+font-size:34px;
 }
 
-.hero-left h2 {
-font-size: 38px;
-margin-top: 0;
-margin-bottom: 14px;
-color: #fff7f0;
+.hero-text p{
+color:#ddd0c5;
 }
 
-.hero-left p {
-color: #ddd0c5;
+.profile{
+text-align:center;
 }
 
-.hero-image-card {
-background-color: rgba(255,255,255,0.05);
-border: 1px solid #5b4740;
-border-radius: 18px;
-padding: 20px;
-box-shadow: 0 10px 24px rgba(0,0,0,0.25);
-text-align: center;
+.profile img{
+width:300px;
+border-radius:14px;
+border:4px solid #6a5248;
+box-shadow:0 6px 18px rgba(0,0,0,.4);
 }
 
-.hero-image-card img {
-width: 100%;
-max-width: 320px;
-border-radius: 12px;
-border: 4px solid #5a443d;
+footer{
+text-align:center;
+padding:22px;
+background:#1f1715;
+color:#cdbbae;
+margin-top:60px;
 }
 
-main {
-max-width: 1000px;
-margin: auto;
-padding: 20px;
+@media(max-width:800px){
+.hero{
+grid-template-columns:1fr;
+text-align:center;
 }
-
-.content-box {
-background-color: rgba(255,255,255,0.05);
-border: 1px solid #5b4740;
-border-radius: 18px;
-padding: 28px;
-box-shadow: 0 10px 24px rgba(0,0,0,0.25);
-}
-
-.content-box h3 {
-margin-top: 0;
-border-bottom: 1px solid #5a443d;
-padding-bottom: 8px;
-}
-
-footer {
-text-align: center;
-padding: 22px;
-background-color: #1f1715;
-color: #cdbbae;
-border-top: 1px solid #4f3c36;
-margin-top: 40px;
-}
-
-@media (max-width: 850px) {
-
-.hero {
-grid-template-columns: 1fr;
-text-align: center;
-}
-
-.hero-left {
-text-align: center;
-}
-
-.top-bar {
-justify-content: center;
-text-align: center;
-}
-
-nav {
-margin-top: 8px;
-}
-
-nav a {
-margin: 4px;
-display: inline-block;
-}
-
 }
 
 </style>
@@ -180,7 +120,7 @@ display: inline-block;
 </div>
 
 <nav>
-<a href="index.html" class="active">Home</a>
+<a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="projects.html">Projects</a>
 <a href="contact.html">Contact</a>
@@ -192,40 +132,30 @@ display: inline-block;
 
 <section class="hero">
 
-<div class="hero-left">
+<div class="hero-text">
 
-<h2>Building My Path in Cybersecurity</h2>
+<h2>Hi, I'm Joseph Suhail</h2>
 
 <p>
-Welcome to my personal website. This space documents my progress as I continue
-learning cybersecurity, networking, and secure systems while building projects
-and expanding my technical knowledge.
+Welcome to my personal website. I am currently studying cybersecurity and
+building my skills in network security, system protection, and technical
+problem solving.
+</p>
+
+<p>
+This website will continue to grow as I add more projects and document my
+progress while learning cybersecurity.
 </p>
 
 </div>
 
-<div class="hero-image-card">
+<div class="profile">
 
-<img src="profile.png" alt="Joseph Suhail">
+<img src="joseph.png" alt="Joseph Suhail">
 
 </div>
 
 </section>
-
-<main>
-
-<section class="content-box">
-
-<h3>Welcome</h3>
-
-<p>
-This website serves as my personal portfolio where I will continue adding
-projects, coursework, and technical work as I develop my cybersecurity skills.
-</p>
-
-</section>
-
-</main>
 
 <footer>
 
