@@ -14,107 +14,221 @@
       font-family: Georgia, "Times New Roman", serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #d6c5a8, #b89a78);
+      background: linear-gradient(to bottom, #181311, #241b18, #312521);
+      color: #f3ece4;
       line-height: 1.6;
-      text-align: center;
     }
 
     header {
-      background-color: #2f1e1b;
-      color: white;
-      padding: 22px 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      background: linear-gradient(to right, #221917, #342622);
+      padding: 18px 30px;
+      border-bottom: 1px solid #5a443d;
+      position: sticky;
+      top: 0;
     }
 
-    header h1 {
-      margin: 0 0 6px 0;
-      font-size: 26px;
+    .top-bar {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    header p {
+    .brand h1 {
       margin: 0;
-      font-size: 14px;
-      opacity: 0.9;
+      font-size: 24px;
     }
 
-    nav {
-      margin-top: 10px;
+    .brand p {
+      margin: 2px 0 0 0;
+      font-size: 13px;
+      color: #d6c5b8;
     }
 
     nav a {
-      color: white;
-      margin: 0 12px;
+      color: #f3ece4;
       text-decoration: none;
-      font-weight: bold;
-      padding: 5px 9px;
+      margin-left: 16px;
+      font-size: 14px;
+      padding: 6px 10px;
       border-radius: 6px;
       transition: background-color 0.2s ease;
-      font-size: 14px;
     }
 
     nav a:hover {
-      background-color: rgba(255,255,255,0.10);
+      background-color: #4d3933;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 50px auto 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-left,
+    .hero-right,
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid #5b4740;
+      border-radius: 18px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-left {
+      padding: 40px 30px;
+      text-align: left;
+    }
+
+    .hero-left h2 {
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #fff7f0;
+    }
+
+    .hero-left p {
+      color: #ddd0c5;
+      margin-bottom: 20px;
+    }
+
+    .hero-right {
+      padding: 30px;
+      text-align: left;
+    }
+
+    .hero-right h3 {
+      margin-top: 0;
+      color: #f6ede5;
+    }
+
+    .hero-right ul {
+      padding-left: 18px;
+      margin-bottom: 0;
+      color: #dbcbbf;
+    }
+
+    .hero-right li {
+      margin-bottom: 10px;
+    }
+
+    .hero-buttons {
+      margin-top: 20px;
+    }
+
+    button,
+    .hero-buttons a {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #7a5c50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 11px 18px;
+      cursor: pointer;
       text-decoration: none;
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 10px;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    button:hover,
+    .hero-buttons a:hover {
+      background-color: #5f463d;
+      transform: translateY(-2px);
     }
 
     main {
-      max-width: 800px;
+      max-width: 1100px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 10px 20px 50px 20px;
     }
 
-    section {
-      margin-bottom: 60px;
-      background: #e6dccb;
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .content-box {
       padding: 28px;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-      border: 1px solid #bfa98a;
     }
 
-    h2 {
-      color: #2b2b2b;
+    .content-box h3 {
       margin-top: 0;
+      color: #fff2e8;
+      border-bottom: 1px solid #5a443d;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
     }
 
-    button {
-      font-family: Georgia, "Times New Roman", serif;
-      padding: 10px 22px;
-      background-color: #6a4b3a;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    .content-box p,
+    .content-box li {
+      color: #dbcbbf;
     }
 
-    button:hover {
-      background-color: #533a2c;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    .content-box ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .project-card {
+      background-color: rgba(255,255,255,0.04);
+      border: 1px solid #5a443d;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .project-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-card strong {
+      color: #fff5ec;
+    }
+
+    .contact-links a {
+      color: #d7b7a3;
     }
 
     footer {
+      text-align: center;
+      padding: 22px;
+      background-color: #1f1715;
+      color: #cdbbae;
+      border-top: 1px solid #4f3c36;
       margin-top: 40px;
-      padding: 25px;
-      background-color: #2f1e1b;
-      color: white;
     }
 
-    a {
-      color: #6a4b3a;
-      text-decoration: none;
-    }
+    @media (max-width: 850px) {
+      .hero,
+      .grid-layout {
+        grid-template-columns: 1fr;
+      }
 
-    a:hover {
-      text-decoration: underline;
-    }
+      .hero-left h2 {
+        font-size: 32px;
+      }
 
-    @media (max-width: 600px) {
+      .top-bar {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 8px;
+      }
+
       nav a {
+        margin: 4px;
         display: inline-block;
-        margin: 6px;
       }
     }
   </style>
@@ -123,56 +237,93 @@
 <body>
 
   <header>
-    <h1>Joseph Suhail</h1>
-    <p>Cybersecurity Student</p>
+    <div class="top-bar">
+      <div class="brand">
+        <h1>Joseph Suhail</h1>
+        <p>Cybersecurity Student</p>
+      </div>
 
-    <nav>
-      <a href="#welcome">Welcome</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-
-    <section id="welcome">
-      <h2>Welcome</h2>
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <h2>Building My Path in Cybersecurity</h2>
       <p>
-        This is my personal site where I document my journey into cybersecurity
-        and showcase my projects.
+        Welcome to my personal website. This is where I share my background,
+        projects, and progress as I continue learning cybersecurity, networking,
+        and secure systems.
       </p>
-      <button onclick="showMessage()">Click Me</button>
-    </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a cybersecurity student focused on learning network security,
-        incident response, and secure system practices. This site will
-        continue to grow as I build more projects and skills.
-      </p>
-    </section>
+      <div class="hero-buttons">
+        <button onclick="showMessage()">Explore</button>
+        <a href="#projects">View Projects</a>
+      </div>
+    </div>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul style="list-style: none; padding: 0;">
-        <li><strong>Personal Website</strong> — Hosted on GitHub Pages</li>
-        <li>More projects coming soon</li>
+    <div class="hero-right">
+      <h3>Current Focus</h3>
+      <ul>
+        <li>Network security fundamentals</li>
+        <li>Incident response concepts</li>
+        <li>Secure system practices</li>
+        <li>Building hands-on technical projects</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: Josephsuhail1@gmail.com</p>
-      <p>
-        GitHub:
-        <a href="https://github.com/josephsuhail1" target="_blank">
-          github.com/josephsuhail1
-        </a>
-      </p>
-    </section>
+  <main>
+    <div class="grid-layout">
+      <section class="content-box" id="about">
+        <h3>About Me</h3>
+        <p>
+          I am a cybersecurity student focused on learning how systems,
+          networks, and security practices work together. I enjoy building my
+          knowledge step by step and applying what I learn through projects.
+        </p>
+      </section>
 
+      <section class="content-box" id="projects">
+        <h3>Projects</h3>
+
+        <div class="project-card">
+          <strong>Personal Website</strong>
+          <p>This site is hosted on GitHub Pages and built using HTML, CSS, and JavaScript.</p>
+        </div>
+
+        <div class="project-card">
+          <strong>More Coming Soon</strong>
+          <p>I plan to keep adding more class projects and technical work here over time.</p>
+        </div>
+      </section>
+
+      <section class="content-box">
+        <h3>Skills and Interests</h3>
+        <ul>
+          <li>Cybersecurity fundamentals</li>
+          <li>Networking</li>
+          <li>System security</li>
+          <li>Learning through projects</li>
+        </ul>
+      </section>
+
+      <section class="content-box" id="contact">
+        <h3>Contact</h3>
+        <p>Email: Josephsuhail1@gmail.com</p>
+        <p class="contact-links">
+          GitHub:
+          <a href="https://github.com/josephsuhail1" target="_blank">
+            github.com/josephsuhail1
+          </a>
+        </p>
+      </section>
+    </div>
   </main>
 
   <footer>
@@ -181,7 +332,7 @@
 
   <script>
     function showMessage() {
-      alert("Button clicked 👍");
+      alert("Thanks for checking out my website.");
     }
   </script>
 
