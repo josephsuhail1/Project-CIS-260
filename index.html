@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Joseph Suhail | Personal Website</title>
+  <title>Joseph Suhail | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -58,7 +58,8 @@
       transition: background-color 0.2s ease;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a.active {
       background-color: #4d3933;
     }
 
@@ -150,12 +151,6 @@
       padding: 10px 20px 50px 20px;
     }
 
-    .grid-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
     .content-box {
       padding: 28px;
     }
@@ -173,31 +168,6 @@
       color: #dbcbbf;
     }
 
-    .content-box ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .project-card {
-      background-color: rgba(255,255,255,0.04);
-      border: 1px solid #5a443d;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 14px;
-    }
-
-    .project-card:last-child {
-      margin-bottom: 0;
-    }
-
-    .project-card strong {
-      color: #fff5ec;
-    }
-
-    .contact-links a {
-      color: #d7b7a3;
-    }
-
     footer {
       text-align: center;
       padding: 22px;
@@ -208,8 +178,7 @@
     }
 
     @media (max-width: 850px) {
-      .hero,
-      .grid-layout {
+      .hero {
         grid-template-columns: 1fr;
       }
 
@@ -244,26 +213,26 @@
       </div>
 
       <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero" id="home">
+  <section class="hero">
     <div class="hero-left">
       <h2>Building My Path in Cybersecurity</h2>
       <p>
         Welcome to my personal website. This is where I share my background,
-        projects, and progress as I continue learning cybersecurity, networking,
-        and secure systems.
+        projects, and progress as I continue learning cybersecurity,
+        networking, and secure systems.
       </p>
 
       <div class="hero-buttons">
         <button onclick="showMessage()">Explore</button>
-        <a href="#projects">View Projects</a>
+        <a href="projects.html">View Projects</a>
       </div>
     </div>
 
@@ -279,51 +248,13 @@
   </section>
 
   <main>
-    <div class="grid-layout">
-      <section class="content-box" id="about">
-        <h3>About Me</h3>
-        <p>
-          I am a cybersecurity student focused on learning how systems,
-          networks, and security practices work together. I enjoy building my
-          knowledge step by step and applying what I learn through projects.
-        </p>
-      </section>
-
-      <section class="content-box" id="projects">
-        <h3>Projects</h3>
-
-        <div class="project-card">
-          <strong>Personal Website</strong>
-          <p>This site is hosted on GitHub Pages and built using HTML, CSS, and JavaScript.</p>
-        </div>
-
-        <div class="project-card">
-          <strong>More Coming Soon</strong>
-          <p>I plan to keep adding more class projects and technical work here over time.</p>
-        </div>
-      </section>
-
-      <section class="content-box">
-        <h3>Skills and Interests</h3>
-        <ul>
-          <li>Cybersecurity fundamentals</li>
-          <li>Networking</li>
-          <li>System security</li>
-          <li>Learning through projects</li>
-        </ul>
-      </section>
-
-      <section class="content-box" id="contact">
-        <h3>Contact</h3>
-        <p>Email: Josephsuhail1@gmail.com</p>
-        <p class="contact-links">
-          GitHub:
-          <a href="https://github.com/josephsuhail1" target="_blank">
-            github.com/josephsuhail1
-          </a>
-        </p>
-      </section>
-    </div>
+    <section class="content-box">
+      <h3>Welcome</h3>
+      <p>
+        This site is my personal space to document my journey as a cybersecurity
+        student and continue building a stronger portfolio over time.
+      </p>
+    </section>
   </main>
 
   <footer>
