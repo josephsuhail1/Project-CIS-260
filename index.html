@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+*{
+box-sizing:border-box;
+}
 
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
@@ -17,6 +20,7 @@ color:#f5f5f7;
 header{
 background:rgba(15,15,16,0.85);
 backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(255,255,255,0.08);
 padding:16px 28px;
 position:sticky;
@@ -26,11 +30,16 @@ z-index:1000;
 
 .top-bar{
 max-width:1200px;
-margin:auto;
+margin:0 auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-flex-wrap:wrap;
+gap:20px;
+flex-wrap:nowrap;
+}
+
+.brand{
+flex-shrink:0;
 }
 
 .brand h1{
@@ -45,17 +54,29 @@ font-size:13px;
 color:#a1a1a6;
 }
 
+nav{
+display:flex;
+align-items:center;
+gap:8px;
+flex-shrink:0;
+}
+
 nav a{
 color:#f5f5f7;
 text-decoration:none;
-margin-left:14px;
 font-size:14px;
 padding:8px 12px;
 border-radius:999px;
+transition:background-color 0.2s ease,color 0.2s ease;
+white-space:nowrap;
 }
 
 nav a:hover{
 background:rgba(255,255,255,0.08);
+}
+
+nav a.active{
+background:rgba(255,255,255,0.12);
 }
 
 .hero{
@@ -76,7 +97,7 @@ flex:1;
 font-size:56px;
 font-weight:700;
 letter-spacing:-1.6px;
-margin-bottom:18px;
+margin:0 0 18px 0;
 }
 
 .hero-text p{
@@ -84,6 +105,7 @@ font-size:20px;
 line-height:1.5;
 color:#c7c7cc;
 margin-bottom:30px;
+max-width:600px;
 }
 
 .info-box{
@@ -92,13 +114,14 @@ border:1px solid rgba(255,255,255,0.08);
 border-radius:24px;
 padding:24px 26px;
 box-shadow:0 12px 30px rgba(0,0,0,0.22);
-max-width:500px;
+max-width:520px;
 }
 
 .info-box p{
 margin:0;
 font-size:17px;
 color:#c7c7cc;
+line-height:1.6;
 }
 
 .hero-image{
@@ -117,6 +140,7 @@ box-shadow:0 20px 50px rgba(0,0,0,0.35);
 
 .profile-card img{
 width:280px;
+max-width:100%;
 border-radius:22px;
 display:block;
 }
@@ -132,13 +156,30 @@ margin-top:80px;
 
 @media(max-width:900px){
 
+.top-bar{
+flex-direction:column;
+justify-content:center;
+text-align:center;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
 .hero{
 flex-direction:column;
 text-align:center;
+margin-top:60px;
 }
 
 .hero-text h2{
 font-size:42px;
+}
+
+.hero-text p{
+margin-left:auto;
+margin-right:auto;
 }
 
 .info-box{
@@ -146,14 +187,12 @@ margin:auto;
 }
 
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="top-bar">
 
 <div class="brand">
@@ -162,7 +201,7 @@ margin:auto;
 </div>
 
 <nav>
-<a href="index.html">Home</a>
+<a href="index.html" class="active">Home</a>
 <a href="about.html">About</a>
 <a href="projects.html">Projects</a>
 <a href="resume.html">Resume</a>
@@ -170,14 +209,11 @@ margin:auto;
 </nav>
 
 </div>
-
 </header>
-
 
 <section class="hero">
 
 <div class="hero-text">
-
 <h2>Joseph Suhail</h2>
 
 <p>
@@ -193,20 +229,15 @@ developing technical skills, and the projects I continue to build as I
 work toward a future in cybersecurity.
 </p>
 </div>
-
 </div>
 
-
 <div class="hero-image">
-
 <div class="profile-card">
 <img src="joseph.png" alt="Joseph Suhail">
 </div>
-
 </div>
 
 </section>
-
 
 <footer>
 <p>© 2026 Joseph Suhail</p>
