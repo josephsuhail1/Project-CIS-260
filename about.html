@@ -6,22 +6,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 body{
-font-family:Georgia,"Times New Roman",serif;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
 margin:0;
-background:linear-gradient(to bottom,#181311,#241b18,#312521);
-color:#f3ece4;
+background:#0f0f10;
+color:#f5f5f7;
 }
 
 header{
-background:#221917;
-padding:18px 30px;
-border-bottom:1px solid #5a443d;
+background:rgba(15,15,16,0.85);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+padding:16px 28px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .top-bar{
-max-width:1100px;
+max-width:1180px;
 margin:auto;
 display:flex;
 justify-content:space-between;
@@ -31,26 +35,28 @@ flex-wrap:wrap;
 
 .brand h1{
 margin:0;
-font-size:24px;
+font-size:22px;
+font-weight:600;
 }
 
 .brand p{
-margin:2px 0 0 0;
+margin:3px 0 0 0;
 font-size:13px;
-color:#d6c5b8;
+color:#a1a1a6;
 }
 
 nav a{
-color:#f3ece4;
+color:#f5f5f7;
 text-decoration:none;
-margin-left:16px;
+margin-left:14px;
 font-size:14px;
-padding:6px 10px;
-border-radius:6px;
+padding:8px 12px;
+border-radius:999px;
+transition:background-color 0.2s ease;
 }
 
 nav a:hover{
-background:#4d3933;
+background:rgba(255,255,255,0.08);
 }
 
 main{
@@ -59,36 +65,73 @@ margin:80px auto;
 padding:0 20px;
 }
 
-.about-box{
+.page-box{
 background:rgba(255,255,255,0.05);
-border:1px solid #5b4740;
-border-radius:18px;
-padding:40px;
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+padding:40px 34px;
+box-shadow:0 18px 40px rgba(0,0,0,0.24);
 }
 
-.about-box h2{
+.page-box h2{
 margin-top:0;
+margin-bottom:18px;
+font-size:42px;
+font-weight:700;
+letter-spacing:-1px;
 }
 
-.about-box p{
-color:#ddd0c5;
+.page-box p{
+font-size:18px;
+line-height:1.7;
+color:#c7c7cc;
+margin-bottom:18px;
+}
+
+.page-box p:last-child{
+margin-bottom:0;
 }
 
 footer{
 text-align:center;
-padding:22px;
-background:#1f1715;
-color:#cdbbae;
-margin-top:60px;
+padding:24px;
+border-top:1px solid rgba(255,255,255,0.08);
+color:#8e8e93;
+font-size:14px;
+margin-top:70px;
 }
 
+@media(max-width:700px){
+
+.top-bar{
+justify-content:center;
+text-align:center;
+}
+
+nav{
+margin-top:8px;
+}
+
+nav a{
+margin:4px;
+display:inline-block;
+}
+
+.page-box h2{
+font-size:34px;
+}
+
+.page-box p{
+font-size:17px;
+}
+
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="top-bar">
 
 <div class="brand">
@@ -104,40 +147,31 @@ margin-top:60px;
 </nav>
 
 </div>
-
 </header>
 
 <main>
-
-<div class="about-box">
-
-<h2>About Me</h2>
+<div class="page-box">
+<h2>About</h2>
 
 <p>
-My name is Joseph Suhail and I am currently studying cybersecurity.
-I am interested in learning how networks operate, how systems are secured,
-and how organizations protect their information.
+I am currently studying cybersecurity and building a stronger foundation in
+network security, system protection, and technical problem solving.
 </p>
 
 <p>
-I enjoy building projects and continuing to expand my technical knowledge.
-My goal is to develop strong cybersecurity skills and eventually work in
-a field focused on protecting digital systems and data.
+My interest in cybersecurity comes from wanting to understand how systems work,
+how they are protected, and how organizations keep their data secure.
 </p>
 
 <p>
-This website serves as my portfolio where I will continue adding projects,
-assignments, and technical work as I grow in the cybersecurity field.
+As I continue learning, I plan to keep growing my portfolio through projects,
+coursework, and technical experience that reflect my progress in the field.
 </p>
-
 </div>
-
 </main>
 
 <footer>
-
 <p>© 2026 Joseph Suhail</p>
-
 </footer>
 
 </body>
