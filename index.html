@@ -54,41 +54,81 @@ background:#4d3933;
 }
 
 .hero{
-max-width:1100px;
-margin:80px auto;
+max-width:900px;
+margin:70px auto 30px auto;
 padding:0 20px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.hero-text{
-background:rgba(255,255,255,0.05);
-border:1px solid #5b4740;
-border-radius:18px;
-padding:40px;
-}
-
-.hero-text h2{
-margin-top:0;
-font-size:34px;
-}
-
-.hero-text p{
-color:#ddd0c5;
-}
-
-.profile{
 text-align:center;
 }
 
-.profile img{
-width:220px;
+.profile-card{
+display:inline-block;
+background:rgba(255,255,255,0.05);
+border:1px solid #5b4740;
+border-radius:22px;
+padding:18px;
+box-shadow:0 10px 24px rgba(0,0,0,.28);
+margin-bottom:28px;
+}
+
+.profile-card img{
+width:240px;
 height:auto;
-border-radius:14px;
+display:block;
+border-radius:16px;
 border:4px solid #6a5248;
-box-shadow:0 8px 20px rgba(0,0,0,.45);
+box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+
+.intro-box{
+background:rgba(255,255,255,0.05);
+border:1px solid #5b4740;
+border-radius:18px;
+padding:38px 34px;
+box-shadow:0 10px 24px rgba(0,0,0,.25);
+}
+
+.intro-box h2{
+margin-top:0;
+margin-bottom:14px;
+font-size:36px;
+color:#fff7f0;
+}
+
+.intro-box p{
+margin:0 auto 14px auto;
+max-width:680px;
+color:#ddd0c5;
+font-size:17px;
+}
+
+.intro-box p:last-child{
+margin-bottom:0;
+}
+
+main{
+max-width:900px;
+margin:0 auto 50px auto;
+padding:0 20px;
+}
+
+.content-box{
+background:rgba(255,255,255,0.05);
+border:1px solid #5b4740;
+border-radius:18px;
+padding:28px 30px;
+box-shadow:0 10px 24px rgba(0,0,0,.25);
+text-align:center;
+}
+
+.content-box h3{
+margin-top:0;
+margin-bottom:12px;
+color:#fff2e8;
+}
+
+.content-box p{
+margin:0;
+color:#d8cabf;
 }
 
 footer{
@@ -99,11 +139,34 @@ color:#cdbbae;
 margin-top:60px;
 }
 
-@media(max-width:800px){
-.hero{
-grid-template-columns:1fr;
+@media(max-width:700px){
+
+header{
+padding:18px 20px;
+}
+
+.top-bar{
+justify-content:center;
 text-align:center;
 }
+
+nav{
+margin-top:8px;
+}
+
+nav a{
+margin:4px;
+display:inline-block;
+}
+
+.intro-box h2{
+font-size:30px;
+}
+
+.profile-card img{
+width:210px;
+}
+
 }
 
 </style>
@@ -133,35 +196,40 @@ text-align:center;
 
 <section class="hero">
 
-<div class="hero-text">
-
-<h2>Hi, I'm Joseph Suhail</h2>
-
-<p>
-Welcome to my personal website. I am currently studying cybersecurity and
-building my skills in network security, system protection, and technical
-problem solving.
-</p>
-
-<p>
-This website will continue to grow as I add more projects and document my
-progress while learning cybersecurity.
-</p>
-
+<div class="profile-card">
+<img src="joseph.png" alt="Joseph Suhail">
 </div>
 
-<div class="profile">
+<div class="intro-box">
+<h2>Welcome</h2>
 
-<img src="joseph.png" alt="Joseph Suhail">
+<p>
+My name is Joseph Suhail, and I am a cybersecurity student focused on
+building a strong foundation in security, networking, and technical problem solving.
+</p>
 
+<p>
+This website is my personal space to share my progress, highlight my work,
+and continue growing my portfolio as I develop my skills in cybersecurity.
+</p>
 </div>
 
 </section>
 
+<main>
+
+<section class="content-box">
+<h3>Purpose of This Website</h3>
+<p>
+This site was created to present who I am, what I am learning, and the projects
+I continue to build as I grow in the cybersecurity field.
+</p>
+</section>
+
+</main>
+
 <footer>
-
 <p>© 2026 Joseph Suhail</p>
-
 </footer>
 
 </body>
