@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+html{
+overflow-y:scroll;
+}
+
 *{
 box-sizing:border-box;
 }
@@ -13,12 +17,24 @@ box-sizing:border-box;
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
 margin:0;
-background:#0f0f10;
+background:linear-gradient(135deg,#0b0b0c,#111216,#171821);
 color:#f5f5f7;
+animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 header{
-background:rgba(15,15,16,0.85);
+background:rgba(15,15,16,0.82);
 backdrop-filter:blur(14px);
 -webkit-backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(255,255,255,0.08);
@@ -67,12 +83,13 @@ text-decoration:none;
 font-size:14px;
 padding:8px 12px;
 border-radius:999px;
-transition:background-color 0.2s ease,color 0.2s ease;
+transition:all 0.2s ease;
 white-space:nowrap;
 }
 
 nav a:hover{
 background:rgba(255,255,255,0.08);
+transform:translateY(-1px);
 }
 
 nav a.active{
@@ -91,6 +108,12 @@ border:1px solid rgba(255,255,255,0.08);
 border-radius:28px;
 padding:40px 34px;
 box-shadow:0 18px 40px rgba(0,0,0,0.24);
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.resume-box:hover{
+transform:translateY(-4px);
+box-shadow:0 24px 48px rgba(0,0,0,0.32);
 }
 
 .resume-box h2{
@@ -140,11 +163,12 @@ padding:12px 22px;
 border-radius:999px;
 font-size:15px;
 font-weight:600;
-transition:opacity 0.2s ease;
+transition:all 0.2s ease;
 }
 
 .download a:hover{
-opacity:0.85;
+opacity:0.88;
+transform:translateY(-1px);
 }
 
 footer{
@@ -154,6 +178,15 @@ border-top:1px solid rgba(255,255,255,0.08);
 color:#8e8e93;
 font-size:14px;
 margin-top:70px;
+}
+
+footer a{
+color:#c7c7cc;
+text-decoration:none;
+}
+
+footer a:hover{
+color:#ffffff;
 }
 
 @media(max-width:900px){
@@ -246,6 +279,10 @@ system security, networking concepts, and technical problem solving.
 
 <footer>
 <p>© 2026 Joseph Suhail</p>
+<p>
+<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">LinkedIn</a>
+</p>
 </footer>
 
 </body>
