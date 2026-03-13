@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 html{
 overflow-y:scroll;
 }
@@ -18,12 +17,24 @@ box-sizing:border-box;
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
 margin:0;
-background:#0f0f10;
+background:linear-gradient(135deg,#0b0b0c,#111216,#171821);
 color:#f5f5f7;
+animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 header{
-background:rgba(15,15,16,0.85);
+background:rgba(15,15,16,0.82);
 backdrop-filter:blur(14px);
 -webkit-backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(255,255,255,0.08);
@@ -40,6 +51,11 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 gap:20px;
+flex-wrap:nowrap;
+}
+
+.brand{
+flex-shrink:0;
 }
 
 .brand h1{
@@ -56,7 +72,9 @@ color:#a1a1a6;
 
 nav{
 display:flex;
+align-items:center;
 gap:8px;
+flex-shrink:0;
 }
 
 nav a{
@@ -65,10 +83,13 @@ text-decoration:none;
 font-size:14px;
 padding:8px 12px;
 border-radius:999px;
+transition:all 0.2s ease;
+white-space:nowrap;
 }
 
 nav a:hover{
 background:rgba(255,255,255,0.08);
+transform:translateY(-1px);
 }
 
 nav a.active{
@@ -76,7 +97,7 @@ background:rgba(255,255,255,0.12);
 }
 
 main{
-max-width:900px;
+max-width:950px;
 margin:80px auto;
 padding:0 20px;
 }
@@ -87,6 +108,12 @@ border:1px solid rgba(255,255,255,0.08);
 border-radius:28px;
 padding:40px 34px;
 box-shadow:0 18px 40px rgba(0,0,0,0.24);
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.page-box:hover{
+transform:translateY(-4px);
+box-shadow:0 24px 48px rgba(0,0,0,0.32);
 }
 
 .page-box h2{
@@ -94,6 +121,14 @@ margin-top:0;
 margin-bottom:18px;
 font-size:42px;
 font-weight:700;
+letter-spacing:-1px;
+}
+
+.page-box h3{
+margin-top:28px;
+margin-bottom:14px;
+font-size:24px;
+font-weight:600;
 }
 
 .page-box p{
@@ -101,6 +136,32 @@ font-size:18px;
 line-height:1.7;
 color:#c7c7cc;
 margin-bottom:18px;
+}
+
+.page-box p:last-child{
+margin-bottom:0;
+}
+
+.skills{
+margin-top:12px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skills span{
+background:rgba(255,255,255,0.07);
+border:1px solid rgba(255,255,255,0.08);
+padding:8px 14px;
+border-radius:999px;
+font-size:14px;
+color:#c7c7cc;
+transition:all 0.2s ease;
+}
+
+.skills span:hover{
+background:rgba(255,255,255,0.11);
+transform:translateY(-1px);
 }
 
 footer{
@@ -112,6 +173,41 @@ font-size:14px;
 margin-top:70px;
 }
 
+footer a{
+color:#c7c7cc;
+text-decoration:none;
+}
+
+footer a:hover{
+color:#ffffff;
+}
+
+@media(max-width:900px){
+
+.top-bar{
+flex-direction:column;
+justify-content:center;
+text-align:center;
+}
+
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.page-box h2{
+font-size:34px;
+}
+
+.page-box h3{
+font-size:22px;
+}
+
+.page-box p{
+font-size:17px;
+}
+
+}
 </style>
 </head>
 
@@ -137,9 +233,7 @@ margin-top:70px;
 </header>
 
 <main>
-
 <div class="page-box">
-
 <h2>About</h2>
 
 <p>
@@ -153,16 +247,35 @@ how they are protected, and how organizations keep their data secure.
 </p>
 
 <p>
+This portfolio website was built using plain HTML and CSS and is hosted on
+GitHub Pages as part of my cybersecurity coursework.
+</p>
+
+<p>
 As I continue learning, I plan to keep growing my portfolio through projects,
 coursework, and technical experience that reflect my progress in the field.
 </p>
 
-</div>
+<h3>Skills</h3>
 
+<div class="skills">
+<span>Python</span>
+<span>Digital Forensics</span>
+<span>Cisco Packet Tracer</span>
+<span>Linux Fundamentals</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>Network Security</span>
+</div>
+</div>
 </main>
 
 <footer>
 <p>© 2026 Joseph Suhail</p>
+<p>
+<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">LinkedIn</a>
+</p>
 </footer>
 
 </body>
