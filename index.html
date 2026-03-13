@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+html{
+overflow-y:scroll;
+}
+
 *{
 box-sizing:border-box;
 }
@@ -13,12 +17,24 @@ box-sizing:border-box;
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
 margin:0;
-background:#0f0f10;
+background:linear-gradient(135deg,#0b0b0c,#111216,#171821);
 color:#f5f5f7;
+animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 header{
-background:rgba(15,15,16,0.85);
+background:rgba(15,15,16,0.82);
 backdrop-filter:blur(14px);
 -webkit-backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(255,255,255,0.08);
@@ -67,12 +83,13 @@ text-decoration:none;
 font-size:14px;
 padding:8px 12px;
 border-radius:999px;
-transition:background-color 0.2s ease,color 0.2s ease;
+transition:all 0.2s ease;
 white-space:nowrap;
 }
 
 nav a:hover{
 background:rgba(255,255,255,0.08);
+transform:translateY(-1px);
 }
 
 nav a.active{
@@ -87,6 +104,19 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 gap:60px;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:460px;
+height:460px;
+background:radial-gradient(circle,rgba(90,120,255,0.10),transparent 70%);
+filter:blur(110px);
+top:-160px;
+left:-120px;
+z-index:-1;
 }
 
 .hero-text{
@@ -115,6 +145,12 @@ border-radius:24px;
 padding:24px 26px;
 box-shadow:0 12px 30px rgba(0,0,0,0.22);
 max-width:520px;
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.info-box:hover{
+transform:translateY(-4px);
+box-shadow:0 18px 36px rgba(0,0,0,0.30);
 }
 
 .info-box p{
@@ -122,6 +158,44 @@ margin:0;
 font-size:17px;
 color:#c7c7cc;
 line-height:1.6;
+}
+
+.home-buttons{
+margin-top:24px;
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.home-buttons a{
+display:inline-block;
+padding:12px 20px;
+border-radius:999px;
+text-decoration:none;
+font-size:15px;
+font-weight:600;
+transition:all 0.2s ease;
+}
+
+.primary-btn{
+background:#f5f5f7;
+color:#0f0f10;
+}
+
+.primary-btn:hover{
+opacity:0.88;
+transform:translateY(-1px);
+}
+
+.secondary-btn{
+background:rgba(255,255,255,0.06);
+color:#f5f5f7;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.secondary-btn:hover{
+background:rgba(255,255,255,0.10);
+transform:translateY(-1px);
 }
 
 .hero-image{
@@ -136,6 +210,12 @@ border:1px solid rgba(255,255,255,0.10);
 border-radius:28px;
 padding:20px;
 box-shadow:0 20px 50px rgba(0,0,0,0.35);
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-card:hover{
+transform:translateY(-6px);
+box-shadow:0 26px 56px rgba(0,0,0,0.40);
 }
 
 .profile-card img{
@@ -152,6 +232,15 @@ border-top:1px solid rgba(255,255,255,0.08);
 color:#8e8e93;
 font-size:14px;
 margin-top:80px;
+}
+
+footer a{
+color:#c7c7cc;
+text-decoration:none;
+}
+
+footer a:hover{
+color:#ffffff;
 }
 
 @media(max-width:900px){
@@ -184,6 +273,10 @@ margin-right:auto;
 
 .info-box{
 margin:auto;
+}
+
+.home-buttons{
+justify-content:center;
 }
 
 }
@@ -229,6 +322,11 @@ developing technical skills, and the projects I continue to build as I
 work toward a future in cybersecurity.
 </p>
 </div>
+
+<div class="home-buttons">
+<a href="projects.html" class="primary-btn">View Projects</a>
+<a href="https://github.com/josephsuhail1" target="_blank" class="secondary-btn">View GitHub</a>
+</div>
 </div>
 
 <div class="hero-image">
@@ -241,6 +339,10 @@ work toward a future in cybersecurity.
 
 <footer>
 <p>© 2026 Joseph Suhail</p>
+<p>
+<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">LinkedIn</a>
+</p>
 </footer>
 
 </body>
