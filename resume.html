@@ -7,84 +7,81 @@
 
 <style>
 html{
+scroll-behavior:smooth;
 overflow-y:scroll;
 }
 
 *{
 box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
-margin:0;
-background:linear-gradient(135deg,#0b0b0c,#111216,#171821);
+background:
+radial-gradient(circle at top left, rgba(65,95,255,0.16), transparent 28%),
+radial-gradient(circle at 85% 20%, rgba(0,170,255,0.10), transparent 24%),
+linear-gradient(135deg,#07080b,#0d1016,#12151d);
 color:#f5f5f7;
-animation:fadeIn 0.8s ease;
+line-height:1.6;
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(10px);
+a{
+text-decoration:none;
+color:inherit;
 }
-to{
-opacity:1;
-transform:translateY(0);
-}
+
+.container{
+max-width:1100px;
+margin:0 auto;
+padding:0 22px;
 }
 
 header{
-background:rgba(15,15,16,0.82);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.08);
-padding:16px 28px;
 position:sticky;
 top:0;
 z-index:1000;
+background:rgba(10,11,15,0.78);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .top-bar{
 max-width:1200px;
 margin:0 auto;
+padding:16px 22px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 gap:20px;
-flex-wrap:nowrap;
-}
-
-.brand{
-flex-shrink:0;
 }
 
 .brand h1{
-margin:0;
-font-size:22px;
+font-size:21px;
 font-weight:600;
 }
 
 .brand p{
-margin:3px 0 0 0;
+margin-top:2px;
 font-size:13px;
-color:#a1a1a6;
+color:#9ea3b1;
 }
 
 nav{
 display:flex;
 align-items:center;
 gap:8px;
-flex-shrink:0;
+flex-wrap:wrap;
 }
 
 nav a{
-color:#f5f5f7;
-text-decoration:none;
 font-size:14px;
-padding:8px 12px;
+padding:9px 13px;
 border-radius:999px;
+color:#e8e8ed;
 transition:all 0.2s ease;
-white-space:nowrap;
 }
 
 nav a:hover{
@@ -94,136 +91,203 @@ transform:translateY(-1px);
 
 nav a.active{
 background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.06);
 }
 
-main{
-max-width:900px;
-margin:80px auto;
-padding:0 20px;
+.page-hero{
+padding:80px 0 28px 0;
 }
 
-.resume-box{
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 14px;
+border-radius:999px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
-border-radius:28px;
-padding:40px 34px;
-box-shadow:0 18px 40px rgba(0,0,0,0.24);
-transition:transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.resume-box:hover{
-transform:translateY(-4px);
-box-shadow:0 24px 48px rgba(0,0,0,0.32);
-}
-
-.resume-box h2{
-margin-top:0;
+color:#c9d1e3;
+font-size:13px;
 margin-bottom:20px;
-font-size:42px;
-font-weight:700;
+}
+
+.eyebrow::before{
+content:"";
+width:8px;
+height:8px;
+border-radius:50%;
+background:#7aa2ff;
+box-shadow:0 0 18px rgba(122,162,255,0.9);
+}
+
+.page-hero h2{
+font-size:56px;
+line-height:1.02;
+letter-spacing:-2px;
+margin-bottom:16px;
+}
+
+.page-hero p{
+max-width:760px;
+font-size:19px;
+color:#c4c8d3;
+}
+
+.resume-card{
+background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:30px;
+padding:34px;
+box-shadow:0 18px 45px rgba(0,0,0,0.28);
+margin-top:18px;
+}
+
+.resume-top{
+padding-bottom:22px;
+border-bottom:1px solid rgba(255,255,255,0.08);
+margin-bottom:24px;
+}
+
+.resume-top h3{
+font-size:34px;
 letter-spacing:-1px;
+margin-bottom:8px;
 }
 
-.resume-box h3{
-margin-top:28px;
+.resume-top p{
+font-size:15px;
+color:#c2c8d2;
+}
+
+.resume-section{
+margin-bottom:28px;
+}
+
+.resume-section:last-child{
+margin-bottom:0;
+}
+
+.resume-section h4{
+font-size:20px;
 margin-bottom:12px;
-font-size:24px;
-font-weight:600;
+letter-spacing:-0.5px;
 }
 
-.resume-box p{
-font-size:17px;
-line-height:1.6;
-color:#c7c7cc;
-margin-bottom:12px;
-}
-
-.resume-box ul{
-margin:0;
-padding-left:22px;
-color:#c7c7cc;
-}
-
-.resume-box li{
+.resume-section p{
+font-size:15.5px;
+color:#cfd3dc;
 margin-bottom:10px;
-font-size:17px;
-line-height:1.6;
 }
 
-.download{
-margin-top:28px;
+.resume-section ul{
+padding-left:20px;
+color:#cfd3dc;
 }
 
-.download a{
-display:inline-block;
-text-decoration:none;
-background:#f5f5f7;
-color:#0f0f10;
-padding:12px 22px;
+.resume-section li{
+margin-bottom:8px;
+}
+
+.button-row{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:22px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:13px 20px;
 border-radius:999px;
 font-size:15px;
 font-weight:600;
 transition:all 0.2s ease;
 }
 
-.download a:hover{
-opacity:0.88;
-transform:translateY(-1px);
+.btn-primary{
+background:#f5f5f7;
+color:#0d0e12;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+opacity:0.92;
+}
+
+.btn-secondary{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.09);
+color:#f5f5f7;
+}
+
+.btn-secondary:hover{
+background:rgba(255,255,255,0.10);
+transform:translateY(-2px);
 }
 
 footer{
-text-align:center;
-padding:24px;
+margin-top:60px;
 border-top:1px solid rgba(255,255,255,0.08);
-color:#8e8e93;
+padding:28px 22px 40px 22px;
+text-align:center;
+color:#9096a3;
 font-size:14px;
-margin-top:70px;
 }
 
-footer a{
-color:#c7c7cc;
-text-decoration:none;
+.footer-links{
+margin-top:8px;
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
 }
 
-footer a:hover{
+.footer-links a{
+color:#cfd4de;
+}
+
+.footer-links a:hover{
 color:#ffffff;
 }
 
 @media(max-width:900px){
-
 .top-bar{
 flex-direction:column;
-justify-content:center;
 text-align:center;
 }
 
 nav{
-flex-wrap:wrap;
 justify-content:center;
 }
 
-.resume-box h2{
-font-size:34px;
+.page-hero{
+text-align:center;
 }
 
-.resume-box h3{
-font-size:22px;
+.page-hero h2{
+font-size:42px;
 }
 
-.resume-box p,
-.resume-box li{
-font-size:16px;
+.page-hero p{
+margin:0 auto;
 }
 
+.resume-card{
+padding:24px;
+}
+
+.resume-top h3{
+font-size:28px;
+}
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="top-bar">
-
 <div class="brand">
 <h1>Joseph Suhail</h1>
 <p>Cybersecurity Student</p>
@@ -236,53 +300,93 @@ font-size:16px;
 <a href="resume.html" class="active">Resume</a>
 <a href="contact.html">Contact</a>
 </nav>
-
 </div>
 </header>
 
 <main>
-<div class="resume-box">
-<h2>Resume</h2>
-
-<h3>Education</h3>
-<p>Wilbur Wright College – Chicago, IL</p>
-<p>Associate in Applied Science – Cybersecurity</p>
-
-<h3>Skills</h3>
-<ul>
-<li>Python Programming</li>
-<li>Digital Forensics</li>
-<li>Networking with Cisco Packet Tracer</li>
-<li>Linux Fundamentals</li>
-<li>HTML and CSS</li>
-</ul>
-
-<h3>Projects</h3>
-<ul>
-<li>Digital Forensics Investigations</li>
-<li>Packet Tracer Network Labs</li>
-<li>Python Coursework and Practice</li>
-<li>Personal Portfolio Website</li>
-</ul>
-
-<h3>Experience</h3>
+<section class="page-hero">
+<div class="container">
+<div class="eyebrow">Resume</div>
+<h2>A simple overview of my background and skills.</h2>
 <p>
-Cybersecurity and networking coursework focused on digital evidence analysis,
-system security, networking concepts, and technical problem solving.
+This page highlights my education, technical skills, and current focus as I continue building experience in cybersecurity.
 </p>
+</div>
+</section>
 
-<div class="download">
-<a href="resume.pdf" download>Download Resume</a>
+<section>
+<div class="container">
+<div class="resume-card">
+
+<div class="resume-top">
+<h3>Joseph Suhail</h3>
+<p>Cybersecurity Student • Chicago, Illinois</p>
+<p>
+GitHub: <a href="https://github.com/josephsuhail1" target="_blank">github.com/josephsuhail1</a><br>
+LinkedIn: <a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">linkedin.com/in/joseph-suhail-07a4653a4</a>
+</p>
+</div>
+
+<div class="resume-section">
+<h4>Professional Summary</h4>
+<p>
+Motivated cybersecurity student with an interest in network security, digital forensics, system protection, and technical problem solving. Focused on learning through coursework, labs, and hands-on projects while continuing to build a strong technical foundation.
+</p>
+</div>
+
+<div class="resume-section">
+<h4>Education</h4>
+<p>
+Cybersecurity student currently developing knowledge in networking, security concepts, digital forensics, and technical systems through academic coursework and practical assignments.
+</p>
+</div>
+
+<div class="resume-section">
+<h4>Technical Skills</h4>
+<ul>
+<li>HTML and CSS</li>
+<li>Basic website design and layout</li>
+<li>Networking fundamentals</li>
+<li>Cybersecurity coursework and labs</li>
+<li>Digital forensics concepts</li>
+<li>Technical troubleshooting</li>
+<li>Documentation and written communication</li>
+</ul>
+</div>
+
+<div class="resume-section">
+<h4>Projects</h4>
+<p>
+<strong>Portfolio Website:</strong> Designed and built a personal website to showcase background, projects, resume, and contact information in a clean and professional format.
+</p>
+<p>
+<strong>Cybersecurity Coursework:</strong> Completed academic projects and labs focused on technical learning, practical exercises, and foundational cybersecurity concepts.
+</p>
+</div>
+
+<div class="resume-section">
+<h4>Current Focus</h4>
+<p>
+Continuing to improve technical knowledge, strengthen practical skills, and build a portfolio that reflects real progress as a cybersecurity student.
+</p>
+</div>
+
+<div class="button-row">
+<a href="contact.html" class="btn btn-primary">Contact Me</a>
+<a href="projects.html" class="btn btn-secondary">View Projects</a>
+</div>
+
 </div>
 </div>
+</section>
 </main>
 
 <footer>
 <p>© 2026 Joseph Suhail</p>
-<p>
-<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a> |
+<div class="footer-links">
+<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">LinkedIn</a>
-</p>
+</div>
 </footer>
 
 </body>
