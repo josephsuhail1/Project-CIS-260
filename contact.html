@@ -7,84 +7,81 @@
 
 <style>
 html{
+scroll-behavior:smooth;
 overflow-y:scroll;
 }
 
 *{
 box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
-margin:0;
-background:linear-gradient(135deg,#0b0b0c,#111216,#171821);
+background:
+radial-gradient(circle at top left, rgba(65,95,255,0.16), transparent 28%),
+radial-gradient(circle at 85% 20%, rgba(0,170,255,0.10), transparent 24%),
+linear-gradient(135deg,#07080b,#0d1016,#12151d);
 color:#f5f5f7;
-animation:fadeIn 0.8s ease;
+line-height:1.6;
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(10px);
+a{
+text-decoration:none;
+color:inherit;
 }
-to{
-opacity:1;
-transform:translateY(0);
-}
+
+.container{
+max-width:1100px;
+margin:0 auto;
+padding:0 22px;
 }
 
 header{
-background:rgba(15,15,16,0.82);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.08);
-padding:16px 28px;
 position:sticky;
 top:0;
 z-index:1000;
+background:rgba(10,11,15,0.78);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .top-bar{
 max-width:1200px;
 margin:0 auto;
+padding:16px 22px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 gap:20px;
-flex-wrap:nowrap;
-}
-
-.brand{
-flex-shrink:0;
 }
 
 .brand h1{
-margin:0;
-font-size:22px;
+font-size:21px;
 font-weight:600;
 }
 
 .brand p{
-margin:3px 0 0 0;
+margin-top:2px;
 font-size:13px;
-color:#a1a1a6;
+color:#9ea3b1;
 }
 
 nav{
 display:flex;
 align-items:center;
 gap:8px;
-flex-shrink:0;
+flex-wrap:wrap;
 }
 
 nav a{
-color:#f5f5f7;
-text-decoration:none;
 font-size:14px;
-padding:8px 12px;
+padding:9px 13px;
 border-radius:999px;
+color:#e8e8ed;
 transition:all 0.2s ease;
-white-space:nowrap;
 }
 
 nav a:hover{
@@ -94,107 +91,182 @@ transform:translateY(-1px);
 
 nav a.active{
 background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.06);
 }
 
-main{
-max-width:820px;
-margin:80px auto;
-padding:0 20px;
+.page-hero{
+padding:80px 0 28px 0;
 }
 
-.contact-box{
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 14px;
+border-radius:999px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
+color:#c9d1e3;
+font-size:13px;
+margin-bottom:20px;
+}
+
+.eyebrow::before{
+content:"";
+width:8px;
+height:8px;
+border-radius:50%;
+background:#7aa2ff;
+box-shadow:0 0 18px rgba(122,162,255,0.9);
+}
+
+.page-hero h2{
+font-size:56px;
+line-height:1.02;
+letter-spacing:-2px;
+margin-bottom:16px;
+}
+
+.page-hero p{
+max-width:760px;
+font-size:19px;
+color:#c4c8d3;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+padding-top:18px;
+}
+
+.contact-card{
+background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+border:1px solid rgba(255,255,255,0.08);
 border-radius:28px;
-padding:40px 34px;
-box-shadow:0 18px 40px rgba(0,0,0,0.24);
-text-align:center;
-transition:transform 0.25s ease, box-shadow 0.25s ease;
+padding:28px;
+box-shadow:0 18px 45px rgba(0,0,0,0.28);
 }
 
-.contact-box:hover{
-transform:translateY(-4px);
-box-shadow:0 24px 48px rgba(0,0,0,0.32);
+.contact-card h3{
+font-size:24px;
+margin-bottom:12px;
+letter-spacing:-0.8px;
 }
 
-.contact-box h2{
-margin-top:0;
-margin-bottom:18px;
-font-size:42px;
-font-weight:700;
-letter-spacing:-1px;
+.contact-card p{
+font-size:16px;
+color:#cfd3dc;
+margin-bottom:16px;
 }
 
-.contact-box p{
-font-size:18px;
-line-height:1.6;
-color:#c7c7cc;
-margin-bottom:22px;
+.link-list{
+display:flex;
+flex-direction:column;
+gap:14px;
 }
 
-.contact-links a{
+.contact-link{
 display:block;
-margin:12px 0;
-font-size:18px;
-color:#f5f5f7;
-text-decoration:none;
+padding:16px 18px;
+border-radius:20px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
 transition:all 0.2s ease;
 }
 
-.contact-links a:hover{
-color:#a1a1a6;
-transform:translateY(-1px);
+.contact-link:hover{
+background:rgba(255,255,255,0.08);
+transform:translateY(-2px);
+}
+
+.contact-link strong{
+display:block;
+font-size:16px;
+margin-bottom:4px;
+}
+
+.contact-link span{
+font-size:14px;
+color:#afb6c3;
+}
+
+.note-box{
+margin-top:20px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.07);
+border-radius:24px;
+padding:22px;
+}
+
+.note-box h4{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.note-box p{
+font-size:15px;
+color:#b8beca;
+margin-bottom:0;
 }
 
 footer{
-text-align:center;
-padding:24px;
+margin-top:60px;
 border-top:1px solid rgba(255,255,255,0.08);
-color:#8e8e93;
+padding:28px 22px 40px 22px;
+text-align:center;
+color:#9096a3;
 font-size:14px;
-margin-top:70px;
 }
 
-footer a{
-color:#c7c7cc;
-text-decoration:none;
+.footer-links{
+margin-top:8px;
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
 }
 
-footer a:hover{
+.footer-links a{
+color:#cfd4de;
+}
+
+.footer-links a:hover{
 color:#ffffff;
 }
 
 @media(max-width:900px){
-
 .top-bar{
 flex-direction:column;
-justify-content:center;
 text-align:center;
 }
 
 nav{
-flex-wrap:wrap;
 justify-content:center;
 }
 
-.contact-box h2{
-font-size:34px;
+.page-hero{
+text-align:center;
 }
 
-.contact-box p,
-.contact-links a{
-font-size:16px;
+.page-hero h2{
+font-size:42px;
 }
 
+.page-hero p{
+margin:0 auto;
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="top-bar">
-
 <div class="brand">
 <h1>Joseph Suhail</h1>
 <p>Cybersecurity Student</p>
@@ -207,34 +279,68 @@ font-size:16px;
 <a href="resume.html">Resume</a>
 <a href="contact.html" class="active">Contact</a>
 </nav>
-
 </div>
 </header>
 
 <main>
-<div class="contact-box">
-<h2>Contact</h2>
-
+<section class="page-hero">
+<div class="container">
+<div class="eyebrow">Contact</div>
+<h2>Let’s connect.</h2>
 <p>
-If you would like to connect or learn more about my work,
-you can reach me through the following:
+You can reach out to me through my professional links below. I am always open to connecting, sharing my work, and continuing to grow in cybersecurity.
+</p>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Connect With Me</h3>
+<p>
+The best way to view more of my work and connect professionally is through GitHub and LinkedIn.
 </p>
 
-<div class="contact-links">
-<a href="mailto:Josephsuhail1@gmail.com">Email: Josephsuhail1@gmail.com</a>
-<a href="https://github.com/josephsuhail1" target="_blank">GitHub: github.com/josephsuhail1</a>
-<a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">LinkedIn: linkedin.com/in/joseph-suhail</a>
+<div class="link-list">
+<a href="https://github.com/josephsuhail1" target="_blank" class="contact-link">
+<strong>GitHub</strong>
+<span>github.com/josephsuhail1</span>
+</a>
+
+<a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank" class="contact-link">
+<strong>LinkedIn</strong>
+<span>linkedin.com/in/joseph-suhail-07a4653a4</span>
+</a>
+</div>
+</div>
+
+<div class="contact-card">
+<h3>About This Page</h3>
+<p>
+This contact page keeps things simple and professional. It matches the rest of the website while giving visitors a clear way to find my work and reach my professional profiles.
+</p>
+
+<div class="note-box">
+<h4>Current Focus</h4>
+<p>
+Right now, I am focused on building my skills, improving my portfolio, and continuing to grow as a cybersecurity student through coursework and hands-on projects.
+</p>
+</div>
 </div>
 
 </div>
+</div>
+</section>
 </main>
 
 <footer>
 <p>© 2026 Joseph Suhail</p>
-<p>
-<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a> |
+<div class="footer-links">
+<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">LinkedIn</a>
-</p>
+</div>
 </footer>
 
 </body>
