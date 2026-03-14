@@ -2,89 +2,93 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Joseph Suhail | Home</title>
+<title>Joseph Suhail | Cybersecurity Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 html{
+scroll-behavior:smooth;
 overflow-y:scroll;
 }
 
 *{
 box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
-margin:0;
-background:linear-gradient(135deg,#0b0b0c,#111216,#171821);
+background:
+radial-gradient(circle at top left, rgba(65,95,255,0.16), transparent 28%),
+radial-gradient(circle at 85% 20%, rgba(0,170,255,0.10), transparent 24%),
+linear-gradient(135deg,#07080b,#0d1016,#12151d);
 color:#f5f5f7;
-animation:fadeIn 0.8s ease;
+line-height:1.6;
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(10px);
+a{
+text-decoration:none;
+color:inherit;
 }
-to{
-opacity:1;
-transform:translateY(0);
+
+img{
+max-width:100%;
+display:block;
 }
+
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 22px;
 }
 
 header{
-background:rgba(15,15,16,0.82);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.08);
-padding:16px 28px;
 position:sticky;
 top:0;
 z-index:1000;
+background:rgba(10,11,15,0.78);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .top-bar{
 max-width:1200px;
 margin:0 auto;
+padding:16px 22px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 gap:20px;
-flex-wrap:nowrap;
-}
-
-.brand{
-flex-shrink:0;
 }
 
 .brand h1{
-margin:0;
-font-size:22px;
+font-size:21px;
 font-weight:600;
+letter-spacing:-0.4px;
 }
 
 .brand p{
-margin:3px 0 0 0;
+margin-top:2px;
 font-size:13px;
-color:#a1a1a6;
+color:#9ea3b1;
 }
 
 nav{
 display:flex;
 align-items:center;
 gap:8px;
-flex-shrink:0;
+flex-wrap:wrap;
+justify-content:flex-end;
 }
 
 nav a{
-color:#f5f5f7;
-text-decoration:none;
 font-size:14px;
-padding:8px 12px;
+padding:9px 13px;
 border-radius:999px;
+color:#e8e8ed;
 transition:all 0.2s ease;
-white-space:nowrap;
 }
 
 nav a:hover{
@@ -94,156 +98,360 @@ transform:translateY(-1px);
 
 nav a.active{
 background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.06);
 }
 
 .hero{
-max-width:1200px;
-margin:90px auto 60px auto;
-padding:0 20px;
-display:flex;
+padding:82px 0 36px 0;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.15fr 0.85fr;
+gap:42px;
 align-items:center;
-justify-content:space-between;
-gap:60px;
-position:relative;
 }
 
-.hero::before{
-content:"";
-position:absolute;
-width:460px;
-height:460px;
-background:radial-gradient(circle,rgba(90,120,255,0.10),transparent 70%);
-filter:blur(110px);
-top:-160px;
-left:-120px;
-z-index:-1;
-}
-
-.hero-text{
-flex:1;
-}
-
-.hero-text h2{
-font-size:56px;
-font-weight:700;
-letter-spacing:-1.6px;
-margin:0 0 18px 0;
-}
-
-.hero-text p{
-font-size:20px;
-line-height:1.5;
-color:#c7c7cc;
-margin-bottom:30px;
-max-width:600px;
-}
-
-.info-box{
+.eyebrow{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:8px 14px;
+border-radius:999px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.08);
-border-radius:24px;
-padding:24px 26px;
-box-shadow:0 12px 30px rgba(0,0,0,0.22);
-max-width:520px;
-transition:transform 0.25s ease, box-shadow 0.25s ease;
+color:#c9d1e3;
+font-size:13px;
+margin-bottom:22px;
 }
 
-.info-box:hover{
-transform:translateY(-4px);
-box-shadow:0 18px 36px rgba(0,0,0,0.30);
+.eyebrow::before{
+content:"";
+width:8px;
+height:8px;
+border-radius:50%;
+background:#7aa2ff;
+box-shadow:0 0 18px rgba(122,162,255,0.9);
 }
 
-.info-box p{
-margin:0;
-font-size:17px;
-color:#c7c7cc;
-line-height:1.6;
+.hero h2{
+font-size:64px;
+line-height:1.02;
+letter-spacing:-2px;
+font-weight:700;
+max-width:700px;
+margin-bottom:18px;
 }
 
-.home-buttons{
-margin-top:24px;
+.hero h2 span{
+color:#9fc0ff;
+}
+
+.hero-text > p{
+font-size:20px;
+color:#c4c8d3;
+max-width:650px;
+margin-bottom:28px;
+}
+
+.hero-card{
+background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:28px;
+padding:24px 24px;
+box-shadow:0 18px 45px rgba(0,0,0,0.32);
+max-width:670px;
+margin-bottom:24px;
+}
+
+.hero-card p{
+font-size:16px;
+color:#d3d6de;
+}
+
+.button-row{
 display:flex;
 gap:14px;
 flex-wrap:wrap;
+margin-bottom:28px;
 }
 
-.home-buttons a{
-display:inline-block;
-padding:12px 20px;
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:13px 20px;
 border-radius:999px;
-text-decoration:none;
 font-size:15px;
 font-weight:600;
 transition:all 0.2s ease;
 }
 
-.primary-btn{
+.btn-primary{
 background:#f5f5f7;
-color:#0f0f10;
+color:#0d0e12;
 }
 
-.primary-btn:hover{
-opacity:0.88;
-transform:translateY(-1px);
+.btn-primary:hover{
+transform:translateY(-2px);
+opacity:0.92;
 }
 
-.secondary-btn{
+.btn-secondary{
 background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.09);
 color:#f5f5f7;
-border:1px solid rgba(255,255,255,0.08);
 }
 
-.secondary-btn:hover{
+.btn-secondary:hover{
 background:rgba(255,255,255,0.10);
-transform:translateY(-1px);
+transform:translateY(-2px);
 }
 
-.hero-image{
-flex:1;
+.quick-stats{
+display:grid;
+grid-template-columns:repeat(3, minmax(120px, 1fr));
+gap:14px;
+max-width:700px;
+}
+
+.stat-box{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.07);
+border-radius:22px;
+padding:18px 18px;
+transition:transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-box:hover{
+transform:translateY(-3px);
+border-color:rgba(255,255,255,0.14);
+}
+
+.stat-box h3{
+font-size:25px;
+font-weight:700;
+margin-bottom:4px;
+letter-spacing:-0.5px;
+}
+
+.stat-box p{
+font-size:14px;
+color:#a9afbc;
+}
+
+.hero-visual{
 display:flex;
 justify-content:center;
 }
 
+.profile-shell{
+position:relative;
+width:100%;
+max-width:420px;
+}
+
+.profile-shell::before{
+content:"";
+position:absolute;
+inset:-16px;
+background:radial-gradient(circle, rgba(100,140,255,0.18), transparent 65%);
+filter:blur(50px);
+z-index:0;
+}
+
 .profile-card{
-background:rgba(255,255,255,0.05);
+position:relative;
+z-index:1;
+background:linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+border:1px solid rgba(255,255,255,0.09);
+border-radius:32px;
+padding:24px;
+box-shadow:0 24px 55px rgba(0,0,0,0.38);
+}
+
+.profile-image-wrap{
+width:260px;
+height:260px;
+margin:0 auto 20px auto;
+border-radius:50%;
+padding:7px;
+background:linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.05));
+}
+
+.profile-image-wrap img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
 border:1px solid rgba(255,255,255,0.10);
+}
+
+.profile-info{
+text-align:center;
+}
+
+.profile-info h3{
+font-size:24px;
+font-weight:650;
+letter-spacing:-0.6px;
+margin-bottom:5px;
+}
+
+.profile-info p{
+font-size:15px;
+color:#aab1be;
+margin-bottom:16px;
+}
+
+.profile-tags{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.profile-tags span{
+font-size:13px;
+padding:8px 12px;
+border-radius:999px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+color:#d7dbe5;
+}
+
+.section{
+padding:34px 0;
+}
+
+.section-title{
+margin-bottom:18px;
+}
+
+.section-title h3{
+font-size:30px;
+letter-spacing:-1px;
+margin-bottom:8px;
+}
+
+.section-title p{
+font-size:16px;
+color:#a8aebb;
+max-width:680px;
+}
+
+.focus-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.focus-card{
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.07);
+border-radius:24px;
+padding:24px;
+box-shadow:0 10px 28px rgba(0,0,0,0.18);
+transition:transform 0.2s ease, border-color 0.2s ease;
+}
+
+.focus-card:hover{
+transform:translateY(-4px);
+border-color:rgba(255,255,255,0.14);
+}
+
+.focus-card h4{
+font-size:19px;
+margin-bottom:10px;
+}
+
+.focus-card p{
+font-size:15px;
+color:#b7bdc9;
+}
+
+.cta-strip{
+margin-top:12px;
+background:linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+border:1px solid rgba(255,255,255,0.08);
 border-radius:28px;
-padding:20px;
-box-shadow:0 20px 50px rgba(0,0,0,0.35);
-transition:transform 0.25s ease, box-shadow 0.25s ease;
+padding:24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.profile-card:hover{
-transform:translateY(-6px);
-box-shadow:0 26px 56px rgba(0,0,0,0.40);
+.cta-strip h4{
+font-size:22px;
+letter-spacing:-0.6px;
+margin-bottom:6px;
 }
 
-.profile-card img{
-width:280px;
-max-width:100%;
-border-radius:22px;
-display:block;
+.cta-strip p{
+font-size:15px;
+color:#b7bdc9;
 }
 
 footer{
-text-align:center;
-padding:24px;
+margin-top:70px;
 border-top:1px solid rgba(255,255,255,0.08);
-color:#8e8e93;
+padding:28px 22px 40px 22px;
+text-align:center;
+color:#9096a3;
 font-size:14px;
-margin-top:80px;
 }
 
-footer a{
-color:#c7c7cc;
-text-decoration:none;
+.footer-links{
+margin-top:8px;
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
 }
 
-footer a:hover{
+.footer-links a{
+color:#cfd4de;
+transition:color 0.2s ease;
+}
+
+.footer-links a:hover{
 color:#ffffff;
 }
 
-@media(max-width:900px){
+@media(max-width:980px){
+.hero-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h2{
+font-size:48px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.hero-text > p,
+.hero-card,
+.section-title p{
+margin-left:auto;
+margin-right:auto;
+}
+
+.button-row,
+.profile-tags{
+justify-content:center;
+}
+
+.quick-stats{
+max-width:720px;
+margin:0 auto;
+}
+
+.focus-grid{
+grid-template-columns:1fr;
+}
 
 .top-bar{
 flex-direction:column;
@@ -252,42 +460,44 @@ text-align:center;
 }
 
 nav{
-flex-wrap:wrap;
 justify-content:center;
 }
+}
 
+@media(max-width:640px){
 .hero{
-flex-direction:column;
+padding-top:58px;
+}
+
+.hero h2{
+font-size:38px;
+letter-spacing:-1.3px;
+}
+
+.hero-text > p{
+font-size:17px;
+}
+
+.quick-stats{
+grid-template-columns:1fr;
+}
+
+.profile-image-wrap{
+width:220px;
+height:220px;
+}
+
+.cta-strip{
 text-align:center;
-margin-top:60px;
-}
-
-.hero-text h2{
-font-size:42px;
-}
-
-.hero-text p{
-margin-left:auto;
-margin-right:auto;
-}
-
-.info-box{
-margin:auto;
-}
-
-.home-buttons{
 justify-content:center;
 }
-
 }
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="top-bar">
-
 <div class="brand">
 <h1>Joseph Suhail</h1>
 <p>Cybersecurity Student</p>
@@ -300,49 +510,136 @@ justify-content:center;
 <a href="resume.html">Resume</a>
 <a href="contact.html">Contact</a>
 </nav>
-
 </div>
 </header>
 
+<main>
 <section class="hero">
+<div class="container">
+<div class="hero-grid">
 
 <div class="hero-text">
-<h2>Joseph Suhail</h2>
+<div class="eyebrow">Cybersecurity Portfolio</div>
+
+<h2>
+Building a future in <span>cybersecurity</span> through hands-on learning and real projects.
+</h2>
 
 <p>
-Cybersecurity student focused on network security,
-system protection, and technical problem solving
-through coursework and hands-on projects.
+I’m Joseph Suhail, a cybersecurity student focused on network security, digital forensics, system protection, and technical problem solving through coursework and practical experience.
 </p>
 
-<div class="info-box">
+<div class="hero-card">
 <p>
-Welcome to my portfolio website. This space highlights my academic growth,
-developing technical skills, and the projects I continue to build as I
-work toward a future in cybersecurity.
+This portfolio highlights my growth as a student, the projects I have been building, and the skills I am continuing to strengthen as I work toward a career in cybersecurity.
 </p>
 </div>
 
-<div class="home-buttons">
-<a href="projects.html" class="primary-btn">View Projects</a>
-<a href="https://github.com/josephsuhail1" target="_blank" class="secondary-btn">View GitHub</a>
+<div class="button-row">
+<a href="projects.html" class="btn btn-primary">View Projects</a>
+<a href="resume.html" class="btn btn-secondary">View Resume</a>
+<a href="https://github.com/josephsuhail1" target="_blank" class="btn btn-secondary">GitHub</a>
+<a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+</div>
+
+<div class="quick-stats">
+<div class="stat-box">
+<h3>Student</h3>
+<p>Cybersecurity and technical coursework</p>
+</div>
+<div class="stat-box">
+<h3>Projects</h3>
+<p>Hands-on labs, class work, and portfolio builds</p>
+</div>
+<div class="stat-box">
+<h3>Growth</h3>
+<p>Always learning, improving, and building</p>
+</div>
 </div>
 </div>
 
-<div class="hero-image">
+<div class="hero-visual">
+<div class="profile-shell">
 <div class="profile-card">
+<div class="profile-image-wrap">
 <img src="joseph.png" alt="Joseph Suhail">
 </div>
+
+<div class="profile-info">
+<h3>Joseph Suhail</h3>
+<p>Cybersecurity Student • Chicago</p>
+
+<div class="profile-tags">
+<span>Network Security</span>
+<span>Digital Forensics</span>
+<span>System Protection</span>
+</div>
+</div>
+</div>
+</div>
 </div>
 
+</div>
+</div>
 </section>
+
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h3>What I focus on</h3>
+<p>
+My work is centered around learning the core areas of cybersecurity while building a strong technical foundation through class projects and independent practice.
+</p>
+</div>
+
+<div class="focus-grid">
+<div class="focus-card">
+<h4>Network Security</h4>
+<p>
+Learning how networks operate, how devices communicate, and how to better secure systems through proper configuration and analysis.
+</p>
+</div>
+
+<div class="focus-card">
+<h4>Digital Forensics</h4>
+<p>
+Working with investigative tools and methods to understand digital evidence, file systems, and basic forensic workflows.
+</p>
+</div>
+
+<div class="focus-card">
+<h4>Technical Growth</h4>
+<p>
+Developing problem-solving skills through labs, coursework, website building, and hands-on technical projects.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="cta-strip">
+<div>
+<h4>See more of my work</h4>
+<p>Explore my projects, resume, and ways to connect with me.</p>
+</div>
+
+<div class="button-row" style="margin-bottom:0;">
+<a href="about.html" class="btn btn-secondary">About Me</a>
+<a href="contact.html" class="btn btn-primary">Contact</a>
+</div>
+</div>
+</div>
+</section>
+</main>
 
 <footer>
 <p>© 2026 Joseph Suhail</p>
-<p>
-<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a> |
+<div class="footer-links">
+<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a>
 <a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">LinkedIn</a>
-</p>
+</div>
 </footer>
 
 </body>
