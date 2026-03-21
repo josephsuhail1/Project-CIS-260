@@ -45,21 +45,15 @@ z-index:0;
 }
 
 @keyframes gridMove{
-0%{
-transform:translateY(0);
-}
-100%{
-transform:translateY(40px);
-}
+0%{ transform:translateY(0); }
+100%{ transform:translateY(40px); }
 }
 
-header,
-main,
-footer{
+header, main, footer{
 position:relative;
 z-index:1;
 }
-  
+
 a{
 text-decoration:none;
 color:inherit;
@@ -203,6 +197,14 @@ font-size:14px;
 color:#afb6c3;
 }
 
+/* Divider */
+.divider{
+height:1px;
+background:rgba(255,255,255,0.08);
+margin:18px 0;
+border-radius:2px;
+}
+
 .note-box{
 margin-top:20px;
 background:rgba(255,255,255,0.04);
@@ -275,6 +277,7 @@ grid-template-columns:1fr;
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -315,6 +318,7 @@ The best way to view more of my work and connect professionally is through GitHu
 </p>
 
 <div class="link-list">
+
 <a href="https://github.com/josephsuhail1" target="_blank" class="contact-link">
 <strong>GitHub</strong>
 <span>github.com/josephsuhail1</span>
@@ -324,6 +328,14 @@ The best way to view more of my work and connect professionally is through GitHu
 <strong>LinkedIn</strong>
 <span>linkedin.com/in/joseph-suhail-07a4653a4</span>
 </a>
+
+<div class="divider"></div>
+
+<a href="mailto:josephsuhail1@gmail.com" class="contact-link">
+<strong>Email</strong>
+<span>josephsuhail1@gmail.com</span>
+</a>
+
 </div>
 </div>
 
