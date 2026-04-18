@@ -49,7 +49,9 @@ z-index:0;
 100%{ transform:translateY(40px); }
 }
 
-header, main, footer{
+header,
+main,
+footer{
 position:relative;
 z-index:1;
 }
@@ -197,14 +199,6 @@ font-size:14px;
 color:#afb6c3;
 }
 
-/* Divider */
-.divider{
-height:1px;
-background:rgba(255,255,255,0.08);
-margin:18px 0;
-border-radius:2px;
-}
-
 .note-box{
 margin-top:20px;
 background:rgba(255,255,255,0.04);
@@ -275,6 +269,81 @@ margin:0 auto;
 grid-template-columns:1fr;
 }
 }
+
+@media(max-width:600px){
+.container{
+padding:0 16px;
+}
+
+nav{
+justify-content:center;
+gap:6px;
+}
+
+nav a{
+font-size:13px;
+padding:8px 11px;
+}
+
+.page-hero{
+padding:58px 0 22px 0;
+text-align:center;
+}
+
+.page-hero h2{
+font-size:36px;
+letter-spacing:-1.2px;
+}
+
+.page-hero p{
+font-size:17px;
+margin:0 auto;
+}
+
+.contact-card{
+padding:20px;
+border-radius:24px;
+}
+
+.contact-card h3{
+font-size:22px;
+}
+
+.contact-card p{
+font-size:15px;
+}
+
+.contact-link{
+padding:14px 16px;
+border-radius:18px;
+}
+
+.contact-link strong{
+font-size:15px;
+}
+
+.contact-link span{
+font-size:13px;
+word-break:break-word;
+}
+
+.note-box{
+padding:18px;
+border-radius:20px;
+}
+
+.note-box h4{
+font-size:17px;
+}
+
+.note-box p{
+font-size:14px;
+}
+
+.footer-links{
+gap:12px;
+}
+}
 </style>
 </head>
 
@@ -318,7 +387,6 @@ The best way to view more of my work and connect professionally is through GitHu
 </p>
 
 <div class="link-list">
-
 <a href="https://github.com/josephsuhail1" target="_blank" class="contact-link">
 <strong>GitHub</strong>
 <span>github.com/josephsuhail1</span>
@@ -333,7 +401,6 @@ The best way to view more of my work and connect professionally is through GitHu
 <strong>Email</strong>
 <span>suhail.joseph@outlook.com</span>
 </a>
-
 </div>
 </div>
 
