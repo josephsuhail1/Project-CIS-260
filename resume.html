@@ -2,61 +2,238 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Resume | Joseph Suhail</title>
+<title>Joseph Suhail | Resume</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+html{
+scroll-behavior:smooth;
+overflow-y:scroll;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
-background:#0d0e12;
-color:#fff;
-margin:0;
-display:flex;
-flex-direction:column;
-align-items:center;
+background:
+radial-gradient(circle at top left, rgba(65,95,255,0.16), transparent 28%),
+radial-gradient(circle at 85% 20%, rgba(0,170,255,0.10), transparent 24%),
+linear-gradient(135deg,#07080b,#0d1016,#12151d);
+color:#f5f5f7;
+line-height:1.6;
 }
 
-header{
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
 width:100%;
-padding:20px;
-text-align:center;
-border-bottom:1px solid rgba(255,255,255,0.1);
+height:100%;
+background-image:
+linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+background-size:40px 40px;
+animation:gridMove 25s linear infinite;
+opacity:0.14;
+pointer-events:none;
+z-index:0;
 }
 
-h1{
-font-size:24px;
-margin:0;
+@keyframes gridMove{
+0%{ transform:translateY(0); }
+100%{ transform:translateY(40px); }
+}
+
+header, main, footer{
+position:relative;
+z-index:1;
+}
+
+a{
+text-decoration:none;
+color:inherit;
 }
 
 .container{
-width:100%;
-max-width:1000px;
-padding:20px;
-text-align:center;
+max-width:1200px;
+margin:0 auto;
+padding:0 22px;
 }
 
-iframe{
-width:100%;
-height:80vh;
-border:none;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-margin-top:20px;
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(10,11,15,0.78);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 20px;
-border-radius:999px;
-background:#fff;
-color:#000;
-text-decoration:none;
+.top-bar{
+max-width:1200px;
+margin:0 auto;
+padding:16px 22px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.brand h1{
+font-size:21px;
 font-weight:600;
 }
 
-.btn:hover{
-opacity:0.85;
+.brand p{
+margin-top:2px;
+font-size:13px;
+color:#9ea3b1;
+}
+
+nav{
+display:flex;
+align-items:center;
+gap:8px;
+flex-wrap:wrap;
+justify-content:flex-end;
+}
+
+nav a{
+font-size:14px;
+padding:9px 13px;
+border-radius:999px;
+color:#e8e8ed;
+transition:all 0.2s ease;
+}
+
+nav a:hover{
+background:rgba(255,255,255,0.08);
+transform:translateY(-1px);
+}
+
+nav a.active{
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.06);
+}
+
+/* HERO (same as other pages) */
+.page-hero{
+padding:80px 0 28px 0;
+}
+
+.page-hero h2{
+font-size:56px;
+line-height:1.02;
+letter-spacing:-2px;
+margin-bottom:16px;
+}
+
+.page-hero p{
+max-width:760px;
+font-size:19px;
+color:#c4c8d3;
+}
+
+/* RESUME CARD */
+.resume-card{
+background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+border:1px solid rgba(255,255,255,0.08);
+border-radius:30px;
+padding:26px;
+box-shadow:0 18px 45px rgba(0,0,0,0.28);
+margin-top:18px;
+}
+
+/* PDF */
+.resume-frame{
+width:100%;
+height:85vh;
+border:none;
+border-radius:20px;
+margin-top:18px;
+}
+
+/* BUTTON */
+.button-row{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:13px 20px;
+border-radius:999px;
+font-size:15px;
+font-weight:600;
+transition:all 0.2s ease;
+}
+
+.btn-primary{
+background:#f5f5f7;
+color:#0d0e12;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+opacity:0.92;
+}
+
+footer{
+margin-top:60px;
+border-top:1px solid rgba(255,255,255,0.08);
+padding:28px 22px 40px 22px;
+text-align:center;
+color:#9096a3;
+font-size:14px;
+}
+
+.footer-links{
+margin-top:8px;
+display:flex;
+justify-content:center;
+gap:16px;
+flex-wrap:wrap;
+}
+
+.footer-links a{
+color:#cfd4de;
+}
+
+.footer-links a:hover{
+color:#ffffff;
+}
+
+@media(max-width:900px){
+.top-bar{
+flex-direction:column;
+text-align:center;
+}
+
+nav{
+justify-content:center;
+}
+
+.page-hero{
+text-align:center;
+}
+
+.page-hero h2{
+font-size:42px;
+}
+
+.page-hero p{
+margin:0 auto;
+}
 }
 </style>
 </head>
@@ -64,18 +241,60 @@ opacity:0.85;
 <body>
 
 <header>
-<h1>My Resume</h1>
+<div class="top-bar">
+<div class="brand">
+<h1>Joseph Suhail</h1>
+<p>Cybersecurity Student</p>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="resume.html" class="active">Resume</a>
+<a href="contact.html">Contact</a>
+</nav>
+</div>
 </header>
 
+<main>
+
+<section class="page-hero">
+<div class="container">
+<h2>My Resume</h2>
+<p>
+A quick overview of my experience, education, and skills.
+</p>
+</div>
+</section>
+
+<section>
 <div class="container">
 
-<a href="Resume.pdf" class="btn" download>
+<div class="resume-card">
+
+<div class="button-row">
+<a href="Resume.pdf" class="btn btn-primary" download>
 Download Resume
 </a>
+</div>
 
-<iframe src="Resume.pdf"></iframe>
+<iframe src="Resume.pdf" class="resume-frame"></iframe>
 
 </div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Joseph Suhail</p>
+<div class="footer-links">
+<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">LinkedIn</a>
+</div>
+</footer>
 
 </body>
 </html>
