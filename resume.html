@@ -49,7 +49,9 @@ z-index:0;
 100%{ transform:translateY(40px); }
 }
 
-header, main, footer{
+header,
+main,
+footer{
 position:relative;
 z-index:1;
 }
@@ -122,7 +124,6 @@ background:rgba(255,255,255,0.12);
 border:1px solid rgba(255,255,255,0.06);
 }
 
-/* HERO (same as other pages) */
 .page-hero{
 padding:80px 0 28px 0;
 }
@@ -140,7 +141,6 @@ font-size:19px;
 color:#c4c8d3;
 }
 
-/* RESUME CARD */
 .resume-card{
 background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
 border:1px solid rgba(255,255,255,0.08);
@@ -150,20 +150,11 @@ box-shadow:0 18px 45px rgba(0,0,0,0.28);
 margin-top:18px;
 }
 
-/* PDF */
-.resume-frame{
-width:100%;
-height:85vh;
-border:none;
-border-radius:20px;
-margin-top:18px;
-}
-
-/* BUTTON */
 .button-row{
 display:flex;
 gap:14px;
 flex-wrap:wrap;
+justify-content:flex-start;
 margin-top:10px;
 }
 
@@ -186,6 +177,15 @@ color:#0d0e12;
 .btn-primary:hover{
 transform:translateY(-2px);
 opacity:0.92;
+}
+
+.resume-frame{
+width:100%;
+height:85vh;
+border:none;
+border-radius:20px;
+margin-top:18px;
+background:#fff;
 }
 
 footer{
@@ -234,6 +234,67 @@ font-size:42px;
 .page-hero p{
 margin:0 auto;
 }
+
+.button-row{
+justify-content:center;
+}
+
+.resume-card{
+padding:22px;
+}
+}
+
+@media(max-width:700px){
+.resume-frame{
+height:70vh;
+}
+}
+
+@media(max-width:600px){
+.container{
+padding:0 16px;
+}
+
+nav{
+justify-content:center;
+gap:6px;
+}
+
+nav a{
+font-size:13px;
+padding:8px 11px;
+}
+
+.page-hero{
+padding:58px 0 22px 0;
+}
+
+.page-hero h2{
+font-size:36px;
+letter-spacing:-1.2px;
+}
+
+.page-hero p{
+font-size:17px;
+}
+
+.resume-card{
+padding:16px;
+border-radius:24px;
+}
+
+.btn{
+width:100%;
+}
+
+.button-row{
+justify-content:center;
+}
+
+.resume-frame{
+height:65vh;
+border-radius:16px;
+}
 }
 </style>
 </head>
@@ -258,7 +319,6 @@ margin:0 auto;
 </header>
 
 <main>
-
 <section class="page-hero">
 <div class="container">
 <h2>My Resume</h2>
@@ -270,22 +330,17 @@ A quick overview of my experience, education, and skills.
 
 <section>
 <div class="container">
-
 <div class="resume-card">
 
 <div class="button-row">
-<a href="Resume.pdf" class="btn btn-primary" download>
-Download Resume
-</a>
+<a href="Resume.pdf" class="btn btn-primary" download>Download Resume</a>
 </div>
 
 <iframe src="Resume.pdf" class="resume-frame"></iframe>
 
 </div>
-
 </div>
 </section>
-
 </main>
 
 <footer>
