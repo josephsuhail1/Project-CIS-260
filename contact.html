@@ -141,14 +141,15 @@ font-size:19px;
 color:#c4c8d3;
 }
 
-.contact-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-padding-top:18px;
+.contact-wrapper{
+display:flex;
+justify-content:center;
+margin-top:18px;
 }
 
 .contact-card{
+width:100%;
+max-width:520px;
 background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
 border:1px solid rgba(255,255,255,0.08);
 border-radius:28px;
@@ -179,7 +180,6 @@ display:block;
 padding:16px 18px;
 border-radius:20px;
 background:rgba(255,255,255,0.04);
-border:none;
 transition:all 0.2s ease;
 }
 
@@ -197,25 +197,6 @@ margin-bottom:4px;
 .contact-link span{
 font-size:14px;
 color:#afb6c3;
-}
-
-.note-box{
-margin-top:20px;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.07);
-border-radius:24px;
-padding:22px;
-}
-
-.note-box h4{
-font-size:18px;
-margin-bottom:10px;
-}
-
-.note-box p{
-font-size:15px;
-color:#b8beca;
-margin-bottom:0;
 }
 
 footer{
@@ -264,10 +245,6 @@ font-size:42px;
 .page-hero p{
 margin:0 auto;
 }
-
-.contact-grid{
-grid-template-columns:1fr;
-}
 }
 
 @media(max-width:600px){
@@ -305,43 +282,14 @@ padding:20px;
 border-radius:24px;
 }
 
-.contact-card h3{
-font-size:22px;
-}
-
-.contact-card p{
-font-size:15px;
-}
-
 .contact-link{
 padding:14px 16px;
 border-radius:18px;
 }
 
-.contact-link strong{
-font-size:15px;
-}
-
 .contact-link span{
 font-size:13px;
 word-break:break-word;
-}
-
-.note-box{
-padding:18px;
-border-radius:20px;
-}
-
-.note-box h4{
-font-size:17px;
-}
-
-.note-box p{
-font-size:14px;
-}
-
-.footer-links{
-gap:12px;
 }
 }
 </style>
@@ -371,19 +319,19 @@ gap:12px;
 <div class="container">
 <h2>Let’s connect.</h2>
 <p>
-You can reach out to me through my professional links below. I am always open to connecting, sharing my work, and continuing to grow in cybersecurity.
+You can reach out to me through my professional links below.
 </p>
 </div>
 </section>
 
 <section>
 <div class="container">
-<div class="contact-grid">
+<div class="contact-wrapper">
 
 <div class="contact-card">
 <h3>Connect With Me</h3>
 <p>
-The best way to view more of my work and connect professionally is through GitHub and LinkedIn.
+The best way to view more of my work and connect professionally is through GitHub, LinkedIn, or email.
 </p>
 
 <div class="link-list">
@@ -401,20 +349,6 @@ The best way to view more of my work and connect professionally is through GitHu
 <strong>Email</strong>
 <span>suhail.joseph@outlook.com</span>
 </a>
-</div>
-</div>
-
-<div class="contact-card">
-<h3>About This Page</h3>
-<p>
-This contact page keeps things simple and professional. It matches the rest of the website while giving visitors a clear way to find my work and reach my professional profiles.
-</p>
-
-<div class="note-box">
-<h4>Current Focus</h4>
-<p>
-Right now, I am focused on building my skills, improving my portfolio, and continuing to grow as a cybersecurity student through coursework and hands-on projects.
-</p>
 </div>
 </div>
 
