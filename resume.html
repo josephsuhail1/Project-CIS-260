@@ -2,403 +2,80 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Joseph Suhail | Resume</title>
+<title>Resume | Joseph Suhail</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-html{
-scroll-behavior:smooth;
-overflow-y:scroll;
-}
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
 body{
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
-background:
-radial-gradient(circle at top left, rgba(65,95,255,0.16), transparent 28%),
-radial-gradient(circle at 85% 20%, rgba(0,170,255,0.10), transparent 24%),
-linear-gradient(135deg,#07080b,#0d1016,#12151d);
-color:#f5f5f7;
-line-height:1.6;
-}
-
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:
-linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-background-size:40px 40px;
-animation:gridMove 25s linear infinite;
-opacity:0.14;
-pointer-events:none;
-z-index:0;
-}
-
-@keyframes gridMove{
-0%{
-transform:translateY(0);
-}
-100%{
-transform:translateY(40px);
-}
-}
-
-header,
-main,
-footer{
-position:relative;
-z-index:1;
-}
-  
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.container{
-max-width:1200px;
-margin:0 auto;
-padding:0 22px;
+background:#0d0e12;
+color:#fff;
+margin:0;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 header{
-position:sticky;
-top:0;
-z-index:1000;
-background:rgba(10,11,15,0.78);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,0.08);
+width:100%;
+padding:20px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
-.top-bar{
-max-width:1200px;
-margin:0 auto;
-padding:16px 22px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:20px;
+h1{
+font-size:24px;
+margin:0;
 }
 
-.brand h1{
-font-size:21px;
-font-weight:600;
+.container{
+width:100%;
+max-width:1000px;
+padding:20px;
+text-align:center;
 }
 
-.brand p{
-margin-top:2px;
-font-size:13px;
-color:#9ea3b1;
-}
-
-nav{
-display:flex;
-align-items:center;
-gap:8px;
-flex-wrap:wrap;
-justify-content:flex-end;
-}
-
-nav a{
-font-size:14px;
-padding:9px 13px;
-border-radius:999px;
-color:#e8e8ed;
-transition:all 0.2s ease;
-}
-
-nav a:hover{
-background:rgba(255,255,255,0.08);
-transform:translateY(-1px);
-}
-
-nav a.active{
-background:rgba(255,255,255,0.12);
-border:1px solid rgba(255,255,255,0.06);
-}
-
-.page-hero{
-padding:80px 0 28px 0;
-}
-
-.page-hero h2{
-font-size:56px;
-line-height:1.02;
-letter-spacing:-2px;
-margin-bottom:16px;
-}
-
-.page-hero p{
-max-width:760px;
-font-size:19px;
-color:#c4c8d3;
-}
-
-.resume-card{
-background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-border:1px solid rgba(255,255,255,0.08);
-border-radius:30px;
-padding:34px;
-box-shadow:0 18px 45px rgba(0,0,0,0.28);
-margin-top:18px;
-}
-
-.resume-top{
-padding-bottom:22px;
-border-bottom:1px solid rgba(255,255,255,0.08);
-margin-bottom:24px;
-}
-
-.resume-top h3{
-font-size:34px;
-letter-spacing:-1px;
-margin-bottom:8px;
-}
-
-.resume-top p{
-font-size:15px;
-color:#c2c8d2;
-}
-
-.resume-section{
-margin-bottom:28px;
-}
-
-.resume-section:last-child{
-margin-bottom:0;
-}
-
-.resume-section h4{
-font-size:20px;
-margin-bottom:12px;
-letter-spacing:-0.5px;
-}
-
-.resume-section p{
-font-size:15.5px;
-color:#cfd3dc;
-margin-bottom:10px;
-}
-
-.resume-section ul{
-padding-left:20px;
-color:#cfd3dc;
-}
-
-.resume-section li{
-margin-bottom:8px;
-}
-
-.button-row{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
-margin-top:22px;
+iframe{
+width:100%;
+height:80vh;
+border:none;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+margin-top:20px;
 }
 
 .btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:13px 20px;
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
 border-radius:999px;
-font-size:15px;
+background:#fff;
+color:#000;
+text-decoration:none;
 font-weight:600;
-transition:all 0.2s ease;
 }
 
-.btn-primary{
-background:#f5f5f7;
-color:#0d0e12;
-}
-
-.btn-primary:hover{
-transform:translateY(-2px);
-opacity:0.92;
-}
-
-.btn-secondary{
-background:rgba(255,255,255,0.06);
-border:1px solid rgba(255,255,255,0.09);
-color:#f5f5f7;
-}
-
-.btn-secondary:hover{
-background:rgba(255,255,255,0.10);
-transform:translateY(-2px);
-}
-
-footer{
-margin-top:60px;
-border-top:1px solid rgba(255,255,255,0.08);
-padding:28px 22px 40px 22px;
-text-align:center;
-color:#9096a3;
-font-size:14px;
-}
-
-.footer-links{
-margin-top:8px;
-display:flex;
-justify-content:center;
-gap:16px;
-flex-wrap:wrap;
-}
-
-.footer-links a{
-color:#cfd4de;
-}
-
-.footer-links a:hover{
-color:#ffffff;
-}
-
-@media(max-width:900px){
-.top-bar{
-flex-direction:column;
-text-align:center;
-}
-
-nav{
-justify-content:center;
-}
-
-.page-hero{
-text-align:center;
-}
-
-.page-hero h2{
-font-size:42px;
-}
-
-.page-hero p{
-margin:0 auto;
-}
-
-.resume-card{
-padding:24px;
-}
-
-.resume-top h3{
-font-size:28px;
-}
+.btn:hover{
+opacity:0.85;
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="top-bar">
-<div class="brand">
-<h1>Joseph Suhail</h1>
-<p>Cybersecurity Student</p>
-</div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="projects.html">Projects</a>
-<a href="resume.html" class="active">Resume</a>
-<a href="contact.html">Contact</a>
-</nav>
-</div>
+<h1>My Resume</h1>
 </header>
 
-<main>
-<section class="page-hero">
 <div class="container">
-<h2>A simple overview of my background and skills.</h2>
-<p>
-This page highlights my education, technical skills, and current focus as I continue building experience in cybersecurity.
-</p>
-</div>
-</section>
 
-<section>
-<div class="container">
-<div class="resume-card">
+<a href="Resume.pdf" class="btn" download>
+Download Resume
+</a>
 
-<div class="resume-top">
-<h3>Joseph Suhail</h3>
-<p>Cybersecurity Student • Chicago, Illinois</p>
-<p>
-GitHub: <a href="https://github.com/josephsuhail1" target="_blank">github.com/josephsuhail1</a><br>
-LinkedIn: <a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">linkedin.com/in/joseph-suhail-07a4653a4</a>
-</p>
-</div>
-
-<div class="resume-section">
-<h4>Professional Summary</h4>
-<p>
-Motivated cybersecurity student with an interest in network security, digital forensics, system protection, and technical problem solving. Focused on learning through coursework, labs, and hands-on projects while continuing to build a strong technical foundation.
-</p>
-</div>
-
-<div class="resume-section">
-<h4>Education</h4>
-<p>
-Cybersecurity student currently developing knowledge in networking, security concepts, digital forensics, and technical systems through academic coursework and practical assignments.
-</p>
-</div>
-
-<div class="resume-section">
-<h4>Technical Skills</h4>
-<ul>
-<li>HTML and CSS</li>
-<li>Basic website design and layout</li>
-<li>Networking fundamentals</li>
-<li>Cybersecurity coursework and labs</li>
-<li>Digital forensics concepts</li>
-<li>Technical troubleshooting</li>
-<li>Documentation and written communication</li>
-</ul>
-</div>
-
-<div class="resume-section">
-<h4>Projects</h4>
-<p>
-<strong>Portfolio Website:</strong> Designed and built a personal website to showcase background, projects, resume, and contact information in a clean and professional format.
-</p>
-<p>
-<strong>Cybersecurity Coursework:</strong> Completed academic projects and labs focused on technical learning, practical exercises, and foundational cybersecurity concepts.
-</p>
-</div>
-
-<div class="resume-section">
-<h4>Current Focus</h4>
-<p>
-Continuing to improve technical knowledge, strengthen practical skills, and build a portfolio that reflects real progress as a cybersecurity student.
-</p>
-</div>
-
-<div class="button-row">
-<a href="contact.html" class="btn btn-secondary">Contact Me</a>
-<a href="projects.html" class="btn btn-secondary">View Projects</a>
-</div>
+<iframe src="Resume.pdf"></iframe>
 
 </div>
-</div>
-</section>
-</main>
-
-<footer>
-<p>© 2026 Joseph Suhail</p>
-<div class="footer-links">
-<a href="https://github.com/josephsuhail1" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/joseph-suhail-07a4653a4/" target="_blank">LinkedIn</a>
-</div>
-</footer>
 
 </body>
 </html>
